@@ -20,6 +20,14 @@ module.exports = function(app) {
     });
   });
 
+  // Tam add app page
+  app.get('/app', function (req, res) {
+    res.render('app', {
+      
+
+    });
+  });
+
   // Render 404 page for any unmatched routes
   app.get('*', function(req, res) {
     res.render('404');

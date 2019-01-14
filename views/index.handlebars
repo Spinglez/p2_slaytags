@@ -1,4 +1,4 @@
-<div id="home">
+{{!-- <div id="home">
   <div class="container">
     <div class="row">
       <div class="col-8 offset-2">
@@ -27,7 +27,37 @@
       </div>
     </div>
   </div>
-</div>
+</div> --}}
+
+{{!-- Tam's code --}}
+
+<section id="home" class="landingPage">
+
+  <div class="bg-video">
+    <video class="bg-video__content" autoplay muted loop>
+      <source src="../img/Traffic_disco.mp4" type="video/mp4">
+      <source src="../img/Traffic_disco.webm" type="video/webm">
+      Your browser is not supported!
+    </video>
+  </div>
+  {{!-- End Video div --}}
+
+  <div class="flex">
+    <div class="text">
+      Slay<span class="highlight">Tag</span>
+    </div>
+
+    <div class="btn btn-animation" id="logIn">
+      Sign Up<i class="fas fa-user-plus"></i>
+      <a href="app/"></a>
+      {{!-- After click -> switch to Log In page --}}
+    </div>
+  </div>
+
+  {{!-- End Flex div --}}
+
+</section>
+
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
