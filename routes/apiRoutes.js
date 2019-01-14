@@ -1,24 +1,36 @@
-const db = require('../models');
+var db = require("../models");
 
-module.exports = function(app) {
-  // Get all examples
-  app.get('/api/examples', function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.json(dbExamples);
+module.exports = function (app) {
+  app.get("/api/products", function (req, res) {
+    // Here we add an "include" property to our options in our findAll query
+    // We set the value to an array of the models we want to include in a left outer join
+    // In this case, just db.Post
+    db.Products.findAll({
+      include: [db.Post]
+    }).then(function (dbProducts) {
+      res.json(dbProducts);
     });
   });
 
-  // Create a new example
-  app.post('/api/examples', function(req, res) {
-    db.Example.create(req.body).then(function(dbExample) {
-      res.json(dbExample);
+  app.get("/api/products/:id", function (req, res) {
+    // Here we add an "include" property to our options in our findOne query
+    // We set the value to an array of the models we want to include in a left outer join
+    // In this case, just db.Post
+    db.Products.findOne({
+      where: {
+        id: req.params.id
+      },
+      include: [db.Post]
+    }).then(function (dbProducts) {
+      res.json(dbProducts);
     });
   });
 
-  // Delete an example by id
-  app.delete('/api/examples/:id', function(req, res) {
-    db.Example.destroy({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.json(dbExample);
+  app.post("/api/products", function (req, res) {
+    db.Products.create(req.body).then(function (dbProducts) {
+      res.json(dbProducts);
     });
   });
+
+
 };
