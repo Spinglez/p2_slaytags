@@ -1,3 +1,54 @@
 .list-group-item {
   line-height: 2.5;
 }
+
+body{
+  color: white;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  top: 50%;
+  left: 50%;
+}
+
+.text {
+  font-size: 6rem;
+  color: white;
+  font-weight: 700;
+}
+
+.highlight,
+.fas {
+  color: tomato;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: .9;
+  overflow: hidden; }
+  
+.bg-video__content {
+  height: 100%;
+  width: 100%;
+  object-fit: cover; }
+
+.btn {
+  box-sizing: inherit;
+  outline-offset: 2rem;
+  display: inline-block;
+  font-size: 13pt;
+  border-width: 2px;
+  border-style: solid;
+  border-color: tomato;
+  border-image: initial;
+}

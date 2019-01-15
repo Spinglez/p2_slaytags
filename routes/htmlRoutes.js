@@ -1,7 +1,7 @@
 const db = require('../models');
 
 // in this file, we would use the database to access the data posted from our ajax calls in bestBuy.js to render the right data
-// 
+
 module.exports = function (app) {
   // Load home index page
   app.get('/', function (req, res) {
@@ -31,6 +31,7 @@ module.exports = function (app) {
       // add handlebars attributes here
     });
   });
+
 
   // Render 404 page for any unmatched routes
   app.get('*', function (req, res) {
