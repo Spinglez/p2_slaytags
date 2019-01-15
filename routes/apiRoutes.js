@@ -1,7 +1,7 @@
-var db = require("../models");
+var db = require('../models');
 
 module.exports = function (app) {
-  app.get("/api/products", function (req, res) {
+  app.get('/api/products', function (req, res) {
     // Here we add an "include" property to our options in our findAll query
     // We set the value to an array of the models we want to include in a left outer join
     // In this case, just db.Post
@@ -12,7 +12,7 @@ module.exports = function (app) {
     });
   });
 
-  app.get("/api/products/:id", function (req, res) {
+  app.get('/api/products/:id', function (req, res) {
     // Here we add an "include" property to our options in our findOne query
     // We set the value to an array of the models we want to include in a left outer join
     // In this case, just db.Post
@@ -26,7 +26,7 @@ module.exports = function (app) {
     });
   });
 
-  app.post("/api/products", function (req, res) {
+  app.post('/api/products', function (req, res) {
     db.Products.create(req.body).then(function (dbProducts) {
       res.json(dbProducts);
     });
