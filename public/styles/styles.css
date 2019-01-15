@@ -2,8 +2,12 @@
   line-height: 2.5;
 }
 
+.jumbotron{
+  max-width: 960px;
+}
+
 body{
-  color: white;
+  color: black;
 }
 
 .flex {
@@ -52,3 +56,12 @@ body{
   border-color: tomato;
   border-image: initial;
 }
+
+.title-app{
+  color: black;
+}
+
+img {
+  width: 50%;
+}
+
