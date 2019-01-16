@@ -7,6 +7,10 @@ const db = require('./models');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+const dotenv = require('dotenv');
+
+let keys = dotenv.config();
+
 // Middleware
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
@@ -44,4 +48,7 @@ db.sequelize.sync(syncOptions).then(function() {
   });
 });
 
+console.log(keys.parsed.BESTBUY_KEY);
+
 module.exports = app;
+module.exports = keys;

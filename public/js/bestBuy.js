@@ -1,4 +1,5 @@
 // This is where we would define the buttons
+const keys = require('../keys');
 let $exampleText = $('#example-text');
 let $exampleDescription = $('#example-description');
 let $submitBtn = $('#submit');
@@ -11,7 +12,8 @@ let $productInput = $('#product-name');
 function addBestBuyProducts(userInput) {
   // will format query URL more appropriatly later (needs to handle multiple words)
   // Christian or anyone else on this page, if you want access to the Best Buy documentation, just make an account. My API key is legit tho!
-  queryURL = 'https://api.bestbuy.com/v1/products(name='+userInput+'*)?show=sku,name,salePrice&apiKey=Acdwbgr1I88E0lx380wiezkr';
+  queryURL = 'https://api.bestbuy.com/v1/products(name='+userInput+'*)?show=sku,name,salePrice&apiKey=' + keys.parsed.BESTBUY_KEY;
+
   // imaginary api endpoint
   return $.ajax({
     // request to direct to app
