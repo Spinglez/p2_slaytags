@@ -138,6 +138,16 @@
 .title-app {
   color: black; }
 
+.navigation__link:link, .navigation__link:visited {
+  display: inline-block;
+  padding: 1rem 2rem;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase; }
+
+.navigation:hover, .navigation:active {
+  color: tomato; }
+
 *,
 *::after,
 *::before {
@@ -158,3 +168,6 @@ body {
 .result-container {
   max-width: 960px;
   height: auto; }
+
+.btn-outline-secondary {
+  color: white; }

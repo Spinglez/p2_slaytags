@@ -1,8 +1,13 @@
+
 @import "abstracts/variables";
+
 @import "base/animation";
 @import "base/typohraphy";
+
 @import "layout/header";
 @import "layout/landingpage";
+@import "layout/navbar";
+
 
 // .list-group-item {
 //   line-height: 2.5;
@@ -34,5 +39,7 @@ body{
     height: auto;
 }
 
-
+.btn-outline-secondary{
+    color: $color-white;
+}
 

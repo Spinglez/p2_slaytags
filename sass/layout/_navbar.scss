@@ -1,0 +1,19 @@
+.navigation {
+
+    &__link{
+        &:link,
+        &:visited{
+        display: inline-block;
+        padding: 1rem 2rem;
+        color: $color-white;
+        text-decoration: none;
+        text-transform: uppercase;   
+        }
+    }   
+
+        &:hover,
+        &:active{
+            color: $color-primary;
+        }
+
+}
