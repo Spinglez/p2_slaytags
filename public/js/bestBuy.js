@@ -1,4 +1,5 @@
 // This is where we would define the buttons
+const keys = require('../keys');
 let $exampleText = $('#example-text');
 let $exampleDescription = $('#example-description');
 let $submitBtn = $('#submit');
@@ -8,10 +9,11 @@ let $productInput = $('#product-name');
 // hey guys, didn't create an ORM example (API object) like the project starter, but it's not necessary.
 
 // on submit of product request
-function addBestBuyProducts() {
+function addBestBuyProducts(userInput) {
   // will format query URL more appropriatly later (needs to handle multiple words)
   // Christian or anyone else on this page, if you want access to the Best Buy documentation, just make an account. My API key is legit tho!
-  queryURL = 'https://API.bestbuy.com/v1/products(search=oven)?format=json&show=sku,name,salePrice&APIKey=Acdwbgr1I88E0lx380wiezkr';
+  queryURL = 'https://api.bestbuy.com/v1/products(name='+userInput+'*)?show=sku,name,salePrice&apiKey=' + keys.parsed.BESTBUY_KEY;
+
   // imaginary api endpoint
   return $.ajax({
     // request to direct to app
@@ -49,7 +51,7 @@ function getProducts() {
     // store data in results
     let results = response.data;
 
-    var rowsToAdd = [];
+    let rowsToAdd = [];
     for (let i = 0; i < results.length; i++) {
       rowsToAdd.push(createAuthorRow(results[i]));
     }

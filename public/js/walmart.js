@@ -29,7 +29,7 @@ function addWalmartProducts() {
 }
 // Function for creating a new list row for a best buy product
 function createProductRow(product) {
-  var newTr = $('<tr>');
+  let newTr = $('<tr>');
   newTr.data('product', product);
   newTr.append('<td>' + product.name + '</td>');
   newTr.append('<td>' + product.sku + '</td>');
@@ -51,7 +51,7 @@ function getProducts() {
 
     var rowsToAdd = [];
     for (var i = 0; i < results.length; i++) {
-      rowsToAdd.push(createAuthorRow(results[i]));
+      rowsToAdd.push(createProductRow(results[i]));
     }
     // add rows through to handlebars
     //  ...
