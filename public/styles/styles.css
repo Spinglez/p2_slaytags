@@ -171,3 +171,11 @@ body {
 
 .btn-outline-secondary {
   color: white; }
+
+.u-center-text {
+  text-align: center !important;
+  padding: 5px; }
+
+.search,
+.btn-small {
+  color: #4e4e4e; }

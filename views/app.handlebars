@@ -29,7 +29,7 @@
 
             <form class="form-inline">
                 <a href="/">
-                <button class="btn btn-sm btn-outline-secondary" type="button">Log Out</button>
+                    <button class="btn btn-sm btn-outline-secondary" type="button">Log Out</button>
                 </a>
             </form>
         </div>
@@ -62,7 +62,6 @@
             <span class="heading-primary--main">Welcometo</span>
             <span class="heading-primary--sub_1">Slay</span>
             <span class="heading-primary--sub_2 highlight">Tag</span>
-
         </h1>
     </div>
 
@@ -70,36 +69,35 @@
 
 {{!-- How to use box --}}
 <main>
-
-
     <div class="container">
+        <section class="section-introduce">
+            <div class="u-center-text">
 
-        <div class="howToUse">
+                <h2 class="heading-secondary">Let's get started</h2>
 
-            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample"
-                aria-expanded="false" aria-controls="collapseExample">
-                How to use
-            </button>
-            {{!-- Collapse Instruction --}}
-            <div class="collapse" id="collapse">
-                <div class="card card-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
-                    Nihil
-                    anim
-                    keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample"
+                    aria-expanded="false" aria-controls="collapseExample">
+                    How To Use
+                </button>
+                {{!-- Collapse Instruction --}}
+                <div class="collapse" id="collapseExample">
+                    <div class="card card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                        squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente
+                        ea proident.
+                    </div>
                 </div>
+
+                {{!-- Search box --}}
+                <div class="search">
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+
             </div>
-
-        </div>
-        {{!-- End howToUse div --}}
-
-        {{!-- Search box --}}
-        <div class="search">
-            <form id="search-form" class="form-inline">
-                <input id="mySearch" class="form-control" type="search" placeholder="Item" aria-label="Search">
-                <button class="btn btn-warning btn-md" type="submit"><i class="fab fa-searchengin"></i></button>
-            </form>
-        </div>
+        </section>
 
         <hr>
 
