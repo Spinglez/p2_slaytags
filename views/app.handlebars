@@ -70,10 +70,11 @@
 {{!-- How to use box --}}
 <main>
     <div class="container">
-        <section class="section-introduce u-margin-bottom-small">
+        <section class="section-introduce u-margin-bottom-medium">
             <div class="u-center-text">
 
                 <h2 class="heading-secondary">Let's get started</h2>
+                <br>
 
                 <button class="btn btn-primary u-margin-bottom-small" type="button" data-toggle="collapse" data-target="#collapseExample"
                     aria-expanded="false" aria-controls="collapseExample">
@@ -102,35 +103,30 @@
         <hr>
 
         {{!-- After User search - render Bestbuy and Walmart items HERE --}}
-        <h2>Result</h2>
+        <section class="section-about">
+            <div class="u-center-text u-margin-bottom-big">
+                <h2 class="heading-secondary">Result</h2>
+                <div class="row">
+                    {{!-- BESTBUY column --}}
+                    <div class="col">
+                        <h3 class="heading-tertiary u-margin-bottom-small">BestBuy</h3>
+                        <div class="list-item" id="bestBuy-item">
 
-        <div class="jumbotron result-container">
-            <div class="row">
-                <div class="col-6">
-                    <h2>BESTBUY</h2>
-
-                    <div class="list-item" id="bestBuy-item">
-                        {{!-- <ul class="bestBuy_list">
-                            {{#each items}}
-                            <span><strong> {{this.id}} - {{this.bestBuy_item}} </strong></span>
-                            <li>{{this}}</li>
-                            {{/each}}
-                        </ul> --}}
-                    </div>
-
-                </div>
-
-                <div class="col-6">
-                    <h2>WALMART</h2>
-
-                    <div class="list-item" id="walmart-item">
+                        </div>
 
                     </div>
 
+                    {{!-- WALMART column --}}
+                    <div class="col">
+                        <h3 class="heading-tertiary u-margin-bottom-small">Walmart</h3>
+                        <div class="list-item" id="walmart-item">
+
+                        </div>
+
+                    </div>
                 </div>
             </div>
-            {{!-- End Row div --}}
-        </div>
+        </section>
 
     </div>
     {{!-- End container div --}}
