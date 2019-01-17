@@ -1,5 +1,7 @@
 // This is where we would define the buttons
 const keys = require('../keys');
+const axios = require('axios');
+
 let $exampleText = $('#example-text');
 let $exampleDescription = $('#example-description');
 let $submitBtn = $('#submit');
@@ -13,6 +15,10 @@ function addBestBuyProducts(userInput) {
   // will format query URL more appropriatly later (needs to handle multiple words)
   // Christian or anyone else on this page, if you want access to the Best Buy documentation, just make an account. My API key is legit tho!
   queryURL = 'https://api.bestbuy.com/v1/products(name='+userInput+'*)?show=sku,name,salePrice&apiKey=' + keys.parsed.BESTBUY_KEY;
+
+  axios.get(queryURL).then(res => {
+    console.log(res);
+  });
 
   // imaginary api endpoint
   return $.ajax({

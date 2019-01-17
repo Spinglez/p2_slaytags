@@ -1,85 +1,136 @@
 {{!-- APP page after the User logIn --}}
 
-<div class="container">
-    <h1 class="title-app">Welcome to Slay<span class="highlight">Tag</span></h1>
-    <div class="jumbotron">
-        <div class="img-gallery">
-            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="../img/work.jpg" class="d-block  mx-auto" alt="work">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../img/desk.jpg" class="d-block  mx-auto" alt="desk">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../img/oldmachine.jpg" class="d-block  mx-auto" alt="old machine">
-                    </div>
+{{!-- NAVBAR --}}
+<div class="navigation fixed-top">
+    <nav class="navbar navbar-expand-lg navigation__nav" id="navbar">
+        <div class="container-fluid">
+
+            <a class="navbar-brand navigation__logo" href="#"><img src="../img/Logo_Slaytag.png" style="width: 45px; height: 45px;"
+                    alt="logo" id="logo"></a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse navigation__collapse" id="navbarNav">
+                <ul class="navbar-nav navigation__list">
+                    <li class="nav-item active navigation__item">
+                        <a class="nav-link navigation__link" href="#">About us<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navigation__link" href="#"><i class="fas fa-heart"></i>list</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navigation__link" href="#">History</a>
+                    </li>
+                </ul>
+            </div>
+
+            <form class="form-inline">
+                <a href="/">
+                    <button class="btn btn-sm btn-outline-secondary" type="button">Log Out</button>
+                </a>
+            </form>
+        </div>
+        <!--End container-fluid-->
+    </nav>
+    <!-- END NAVBAR -->
+</div>
+
+{{!-- CAROUSEL --}}
+<header class="gallery" id="gallery">
+
+    <div class="gallery__img">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../img/work.jpg" class="d-block  mx-auto" alt="work">
+                </div>
+                <div class="carousel-item">
+                    <img src="../img/desk.jpg" class="d-block  mx-auto" alt="desk">
+                </div>
+                <div class="carousel-item">
+                    <img src="../img/oldmachine.jpg" class="d-block  mx-auto" alt="old machine">
                 </div>
             </div>
         </div>
     </div>
-</div>
 
+    <div class="gallery__text-box">
+        <h1 class="heading-primary">
+            <span class="heading-primary--main">Welcometo</span>
+            <span class="heading-primary--sub_1">Slay</span>
+            <span class="heading-primary--sub_2 highlight">Tag</span>
+        </h1>
+    </div>
+
+</header>
 
 {{!-- How to use box --}}
-<div class="container" id="howToUse">
-    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false"
-        aria-controls="collapseExample">
-        How to use
-    </button>
-    <div class="collapse" id="collapseExample">
-        <div class="card card-body">
-            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim
-            keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-        </div>
-    </div>
+<main>
+    <div class="container">
+        <section class="section-introduce u-margin-bottom-medium">
+            <div class="u-center-text">
 
+                <h2 class="heading-secondary">Let's get started</h2>
+                <br>
 
-    {{!-- Search box --}}
-    <div class="search">
-        <form id="search-form" class="form-inline">
-            <input id="mySearch" class="form-control" type="search" placeholder="Item" aria-label="Search">
-            <button class="btn btn-warning btn-md" type="submit"><i class="fab fa-searchengin"></i></button>
-        </form>
-    </div>
+                <button class="btn btn-primary u-margin-bottom-small" type="button" data-toggle="collapse" data-target="#collapseExample"
+                    aria-expanded="false" aria-controls="collapseExample">
+                    How To Use
+                </button>
+                {{!-- Collapse Instruction --}}
+                <div class="collapse u-margin-bottom-small" id="collapseExample">
+                    <div class="card card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                        squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente
+                        ea proident.
+                    </div>
+                </div>
 
-    <hr>
-
-    {{!-- After User search - render Bestbuy and Walmart items HERE --}}
-    <h2>Result</h2>
-
-    <div class="jumbotron">
-        <div class="row">
-            <div class="col-6">
-                <h2>BESTBUY</h2>
-
-                <div class="list-item" id="bestBuy-item">
-                    {{!-- <ul class="bestBuy_list">
-                        {{#each items}}
-                        <span><strong> {{this.id}} - {{this.bestBuy_item}} </strong></span>
-                        <li>{{this}}</li>
-                        {{/each}}
-                    </ul> --}}
+                {{!-- Search box --}}
+                <div class="search">
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-dark my-2 my-sm-0" type="submit">Search</button>
+                    </form>
                 </div>
 
             </div>
+        </section>
 
-            <div class="col-6">
-                <h2>WALMART</h2>
+        <hr>
 
-                <div class="list-item" id="walmart-item">
+        {{!-- After User search - render Bestbuy and Walmart items HERE --}}
+        <section class="section-result u-margin-bottom-medium">
+            <div class="u-center-text u-margin-bottom-big">
+                <h2 class="heading-secondary">Result</h2>
+                <div class="row">
+                    {{!-- BESTBUY column --}}
+                    <div class="col">
+                        <h3 class="heading-tertiary u-margin-bottom-small">BestBuy</h3>
+                        <div class="list-item" id="bestBuy-item">
 
+                        </div>
+
+                    </div>
+
+                    {{!-- WALMART column --}}
+                    <div class="col">
+                        <h3 class="heading-tertiary u-margin-bottom-small">Walmart</h3>
+                        <div class="list-item" id="walmart-item">
+
+                        </div>
+
+                    </div>
                 </div>
-
             </div>
-        </div>
-        {{!-- End Row div --}}
+        </section>
+
     </div>
-
-</div>
-{{!-- End container div --}}
-
+    {{!-- End container div --}}
+</main>
 
 
 {{!-- <button type="button" class="btn btn-primary">Send <i class="fas fa-arrow-right"></i></button> --}}
