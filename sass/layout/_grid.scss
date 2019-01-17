@@ -1,0 +1,20 @@
+.row {
+    max-width: $grid-width;
+    margin: 0 auto; //center block elements inside elements
+    
+    &:not(:last-child) {
+        margin-bottom: $gutter-vertical;
+    }
+
+    @include clearfix;
+
+    [class^="col-"]{
+        float: left;
+
+        &:not(:last-child) {
+            margin-right: $gutter-horizontal;
+        }
+    }
+
+}
+
