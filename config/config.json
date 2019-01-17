@@ -1,14 +1,14 @@
 {
   "development": {
     "username": "root",
-    "password": "ocwio5Ap",
+    "password": "123Rty678!",
     "database": "slaydb",
     "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": null,
+    "password": "123RTy678!",
     "database": "testdb",
     "host": "localhost",
     "dialect": "mysql",
