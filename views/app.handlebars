@@ -1,97 +1,145 @@
 {{!-- APP page after the User logIn --}}
 
-<div class="container">
-    <h1 class="title">Welcome to Slay<span class="highlight">Tag</span></h1>
-    
-    <section class="img-gallery">
+{{!-- NAVBAR --}}
+<div class="navigation fixed-top">
+    <nav class="navbar navbar-expand-lg navigation__nav" id="navbar">
+        <div class="container-fluid">
+
+            <a class="navbar-brand navigation__logo" href="#"><img src="../img/Logo_Slaytag.png" style="width: 45px; height: 45px;"
+                    alt="logo" id="logo"></a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse navigation__collapse" id="navbarNav">
+                <ul class="navbar-nav navigation__list">
+                    <li class="nav-item active navigation__item">
+                        <a class="nav-link navigation__link" href="#">About us<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navigation__link" href="#"><i class="fas fa-heart"></i>list</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navigation__link" href="#">History</a>
+                    </li>
+                </ul>
+            </div>
+
+            <form class="form-inline">
+                <a href="/">
+                    <button class="btn btn-sm btn-outline-secondary" type="button">Log Out</button>
+                </a>
+            </form>
+        </div>
+        <!--End container-fluid-->
+    </nav>
+    <!-- END NAVBAR -->
+</div>
+
+{{!-- CAROUSEL --}}
+<header class="gallery" id="gallery">
+
+    <div class="gallery__img">
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="../public/img/work.jpg" class="d-block w-100" alt="work">
+                    <img src="../img/work.jpg" class="d-block  mx-auto" alt="work">
                 </div>
                 <div class="carousel-item">
-                    <img src="../public/img/desk.jpg" class="d-block w-100" alt="desk">
+                    <img src="../img/desk.jpg" class="d-block  mx-auto" alt="desk">
                 </div>
                 <div class="carousel-item">
-                    <img src="../public/img/oldmachine.jpg" class="d-block w-100" alt="old machine">
+                    <img src="../img/oldmachine.jpg" class="d-block  mx-auto" alt="old machine">
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <panel>
-        <form class="create-form">
-            <div class="form-group">
-                <label for="newSearch">What are you looking for? </label>
-                <input type="text" id="newSearch" name="searchItem" style="width:35%">
-                <button type="submit" class="btn btn-warning" id="addItem"><i class="fab fa-searchengin"></i></button>
-            </div>
+    <div class="gallery__text-box">
+        <h1 class="heading-primary">
+            <span class="heading-primary--main">Welcometo</span>
+            <span class="heading-primary--sub_1">Slay</span>
+            <span class="heading-primary--sub_2 highlight">Tag</span>
+        </h1>
+    </div>
 
-            <div class="form__group u-margin-bottom-medium">
+</header>
 
-                <div class="form__radio-group">
-                    <input type="radio" class="form__radio-input" id="small" name="size">
-                    <label for="small" class="form__radio-label">
-                        <span class="form__radio-button"></span>
-                        Phone
-                    </label>
+{{!-- How to use box --}}
+<main>
+    <div class="container">
+        <section class="section-introduce u-margin-bottom-medium">
+            <div class="u-center-text">
+
+                <h2 class="heading-secondary">Let's get started</h2>
+                <br>
+
+                <button class="btn btn-primary u-margin-bottom-small" type="button" data-toggle="collapse" data-target="#collapseExample"
+                    aria-expanded="false" aria-controls="collapseExample">
+                    How To Use
+                </button>
+                {{!-- Collapse Instruction --}}
+                <div class="collapse u-margin-bottom-small" id="collapseExample">
+                    <div class="card card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                        squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente
+                        ea proident.
+                    </div>
                 </div>
 
-                <div class="form__radio-group">
-                    <input type="radio" class="form__radio-input" id="large" name="size">
-                    <label for="large" class="form__radio-label">
-                        <span class="form__radio-button"></span>
-                        Laptop
-                    </label>
+                {{!-- Search box --}}
+                <div class="search">
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-dark my-2 my-sm-0" type="submit">Search</button>
+                    </form>
                 </div>
 
             </div>
-        </form>
-    </panel>
+        </section>
 
-    <section class="user-preferences">
-        {{!-- User Budget --}}
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <div class="panel-body">
-                    <ul>
-                        {{#each users}}
-                        <li>{{this}}</li>
-                        {{/each}}
-                    </ul>
-                    <span class="input-group-text">Budget</span>
-                    <span class="input-group-text"><i class="fas fa-dollar-sign"></i></span>
+        <hr>
+
+        {{!-- After User search - render Bestbuy and Walmart items HERE --}}
+        <section class="section-result u-margin-bottom-medium">
+            <div class="u-center-text u-margin-bottom-big">
+                <h2 class="heading-secondary">Result</h2>
+                <div class="row">
+                    {{!-- BESTBUY column --}}
+                    <div class="col">
+                        <h3 class="heading-tertiary u-margin-bottom-small">BestBuy</h3>
+                        <div class="list-item" id="bestBuy-item">
+
+                        </div>
+
+                    </div>
+
+                    {{!-- WALMART column --}}
+                    <div class="col">
+                        <h3 class="heading-tertiary u-margin-bottom-small">Walmart</h3>
+                        <div class="list-item" id="walmart-item">
+
+                        </div>
+
+                    </div>
                 </div>
-                <input type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
             </div>
-        </div>
+        </section>
 
-        {{!-- Popularity --}}
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <span class="input-group-text">Popularity</span>
-                <span class="input-group-text"><i class="fas fa-star"></i></span>
-            </div>
-            <input type="number" class="form-control" aria-label="Rating stars">
-        </div>
-
-        {{!-- Color --}}
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <span class="input-group-text">Color</span>
-                <span class="input-group-text"><i class="fas fa-palette"></i></span>
-            </div>
-            <input type="text" class="form-control" aria-label="Favorite Color">
-        </div>
-    </section>
-
-    {{!-- Submit --}}
-    <button type="button" class="btn btn-primary">Send <i class="fas fa-arrow-right"></i></button>
-
-</div>
-{{!-- End container div --}}
+    </div>
+    {{!-- End container div --}}
+</main>
 
 
+{{!-- <button type="button" class="btn btn-primary">Send <i class="fas fa-arrow-right"></i></button> --}}
+
+
+<<<<<<< HEAD
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 {{!-- <script src="/js/app.js"></script> --}}
 
+=======
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+>>>>>>> e1ddde39886ab21369e8f9184cf458a68230cae9
