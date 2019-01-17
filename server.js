@@ -23,6 +23,7 @@ app.engine(
     defaultLayout: 'main'
   })
 );
+
 app.set('view engine', 'handlebars');
 
 // Routes
