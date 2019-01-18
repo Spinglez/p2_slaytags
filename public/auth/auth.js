@@ -1,5 +1,3 @@
-// console.log(document.getElementById('qsLoginBtn'));
-
 document.addEventListener('DOMContentLoaded', function () {
 
     var idToken;
@@ -9,28 +7,25 @@ document.addEventListener('DOMContentLoaded', function () {
     var webAuth = new auth0.WebAuth({
         domain: 'slaytags.auth0.com',
         clientID: '2YFgHUCs4tlkLxgXBFpr4wMtkrH2jlqL',
-        redirectUri: "http://localhost:3000",
+        redirectUri: "http://localhost:3000/app",
         responseType: 'token id_token',
         scope: 'openid',
     });
-
-    var loginBtn = document.getElementById('qsLoginBtn');
-
-    loginBtn.addEventListener('click', function (e) {
-        e.preventDefault();
-        console.log("clicked!")
-        webAuth.authorize();
-    });
-
     var loginStatus = document.querySelector('.container h4');
-    var homeView = document.getElementById('home-view');
-
-    var logoutBtn = document.getElementById('qsLogoutBtn');
-
-    loginBtn.addEventListener('click', function (e) {
-        e.preventDefault();
-        webAuth.authorize();
-    });
+    
+    console.log(location.pathname);
+    if(location.pathname === "/"){
+        var loginBtn = document.getElementById('qsLoginBtn');
+        loginBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            console.log("clicked!")
+            webAuth.authorize();
+        });
+    }
+    else if(location.pathname === "/app"){
+        var logoutBtn = document.getElementById('qsLogoutBtn');
+        logoutBtn.addEventListener('click', logout);
+    }
 
     function setSession(authResult) {
         // Set the time that the access token will expire at
@@ -47,6 +42,8 @@ document.addEventListener('DOMContentLoaded', function () {
         localStorage.removeItem('access_token');
         localStorage.removeItem('id_token');
         localStorage.removeItem('expires_at');
+        window.location.pathname = "/";
+        console.log('logged out!')
         displayButtons();
     }
 
@@ -63,13 +60,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 window.location.pathname = '/app';
                 setSession(authResult);
                 loginBtn.style.display = 'none';
-                homeView.style.display = 'inline-block';
             } else if (err) {
-                homeView.style.display = 'inline-block';
                 console.log(err);
-                alert(
-                    'Error: ' + err.error + '. Check the console for further details.'
-                );
             }
             displayButtons();
         });
@@ -77,15 +69,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function displayButtons() {
         if (isAuthenticated()) {
-            location.pathname = '/app';
             loginBtn.style.display = 'none';
             logoutBtn.style.display = 'inline-block';
             loginStatus.innerHTML = 'You are logged in!';
+            
         } else {
             loginBtn.style.display = 'inline-block';
-            logoutBtn.style.display = 'none';
-            loginStatus.innerHTML =
-                'You are not logged in! Please log in to continue.';
         }
     }
     handleAuthentication();
