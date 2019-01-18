@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
         clientID: '2YFgHUCs4tlkLxgXBFpr4wMtkrH2jlqL',
         redirectUri: "http://localhost:3000/app",
         responseType: 'token id_token',
-        scope: 'openid',
+        scope: 'openid profile',
     });
     var loginStatus = document.querySelector('.container h4');
     
@@ -42,6 +42,8 @@ document.addEventListener('DOMContentLoaded', function () {
         localStorage.removeItem('access_token');
         localStorage.removeItem('id_token');
         localStorage.removeItem('expires_at');
+        localStorage.removeItem('firstName');
+        localStorage.removeItem('lastName');
         window.location.pathname = "/";
         console.log('logged out!')
         displayButtons();
@@ -57,6 +59,8 @@ document.addEventListener('DOMContentLoaded', function () {
     function handleAuthentication() {
         webAuth.parseHash(function (err, authResult) {
             if (authResult && authResult.accessToken && authResult.idToken) {
+                localStorage.setItem('firstName', authResult.idTokenPayload.given_name);
+                localStorage.setItem('lastName', authResult.idTokenPayload.family_name);
                 window.location.pathname = '/app';
                 setSession(authResult);
                 loginBtn.style.display = 'none';
