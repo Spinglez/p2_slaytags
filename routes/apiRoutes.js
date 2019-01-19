@@ -1,4 +1,5 @@
 const db = require('../models');
+const bestBuy = require('../controllers/bestbuy');
 
 module.exports = function (app) {
   app.get('/api/products', function (req, res) {
@@ -27,9 +28,11 @@ module.exports = function (app) {
   });
 
   app.post('/api/products', function (req, res) {
-    db.Products.create(req.body).then(function (dbProducts) {
-      res.json(dbProducts);
-    });
+    console.log(req.body.userInput)
+    bestBuy(req.body.userInput);
+    // db.Products.create().then(function (dbProducts) {
+    //   res.json(dbProducts);
+    // });
   });
 
   app.post('/api/users', function (req, res) {
