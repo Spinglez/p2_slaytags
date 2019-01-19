@@ -1,10 +1,6 @@
 // This is where we would define the buttons
-const keys = require('../keys');
-const axios = require('axios');
-
-let $exampleText = $('#example-text');
-let $exampleDescription = $('#example-description');
 let $submitBtn = $('#submit');
+<<<<<<< HEAD
 let $exampleList = $('#example-list');
 let $productInput = $('#product-name');
 
@@ -29,12 +25,9 @@ function addBestBuyProducts(userInput) {
     // store data in results
     var results = response.data;
     console.log(results);
+=======
+>>>>>>> 8166cf8e123efb0e5ec274be62b9fdbf726e0373
 
-    // store this data in the database here
-    // ...
-
-  });
-}
 // Function for creating a new list row for a best buy product
 function createProductRow(product) {
   var newTr = $('<tr>');
