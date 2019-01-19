@@ -1,33 +1,7 @@
 // This is where we would define the buttons
 const keys = require('../keys');
-const axios = require('axios');
-
 let $submitBtn = $('#submit');
 
-// on submit of product request
-function addBestBuyProducts(userInput) {
-  $.post("/api/products")
-  queryURL = 'https://api.bestbuy.com/v1/products(name='+userInput+'*)?show=sku,name,salePrice&apiKey=' + keys.parsed.BESTBUY_KEY;
-
-  axios.get(queryURL).then(res => {
-    console.log(res);
-  });
-
-  // imaginary api endpoint
-  return $.ajax({
-    // request to direct to app
-    url: queryURL,
-    type: 'GET'
-  }).then(function (response) {
-    // store data in results
-    var results = response.data;
-    console.log(results);
-
-    // store this data in the database here
-    // ...
-
-  });
-}
 // Function for creating a new list row for a best buy product
 function createProductRow(product) {
   var newTr = $('<tr>');
