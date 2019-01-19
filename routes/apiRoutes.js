@@ -1,4 +1,4 @@
-var db = require('../models');
+const db = require('../models');
 
 module.exports = function (app) {
   app.get('/api/products', function (req, res) {
@@ -31,6 +31,4 @@ module.exports = function (app) {
       res.json(dbProducts);
     });
   });
-
-
 };
