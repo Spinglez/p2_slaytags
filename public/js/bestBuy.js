@@ -2,18 +2,11 @@
 const keys = require('../keys');
 const axios = require('axios');
 
-let $exampleText = $('#example-text');
-let $exampleDescription = $('#example-description');
 let $submitBtn = $('#submit');
-let $exampleList = $('#example-list');
-let $productInput = $('#product-name');
-
-// hey guys, didn't create an ORM example (API object) like the project starter, but it's not necessary.
 
 // on submit of product request
 function addBestBuyProducts(userInput) {
-  // will format query URL more appropriatly later (needs to handle multiple words)
-  // Christian or anyone else on this page, if you want access to the Best Buy documentation, just make an account. My API key is legit tho!
+  $.post("/api/products")
   queryURL = 'https://api.bestbuy.com/v1/products(name='+userInput+'*)?show=sku,name,salePrice&apiKey=' + keys.parsed.BESTBUY_KEY;
 
   axios.get(queryURL).then(res => {
