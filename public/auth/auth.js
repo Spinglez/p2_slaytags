@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-
     var idToken;
     var accessToken;
     var expiresAt;
@@ -32,11 +31,11 @@ document.addEventListener('DOMContentLoaded', function () {
         var expiresAt = JSON.stringify(
             authResult.expiresIn * 1000 + new Date().getTime()
         );
+
         localStorage.setItem('access_token', authResult.accessToken);
         localStorage.setItem('id_token', authResult.idToken);
         localStorage.setItem('expires_at', expiresAt);
     }
-
     function logout() {
         // Remove tokens and expiry time from localStorage
         localStorage.removeItem('access_token');
@@ -63,7 +62,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 localStorage.setItem('lastName', authResult.idTokenPayload.family_name);
                 window.location.pathname = '/app';
                 setSession(authResult);
-                loginBtn.style.display = 'none';
             } else if (err) {
                 console.log(err);
             }
@@ -73,10 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function displayButtons() {
         if (isAuthenticated()) {
-            loginBtn.style.display = 'none';
-            logoutBtn.style.display = 'inline-block';
-            loginStatus.innerHTML = 'You are logged in!';
-            
+            logoutBtn.style.display = 'inline-block';            
         } else {
             loginBtn.style.display = 'inline-block';
         }

@@ -1,4 +1,5 @@
 // in this file, we would use the database to access the data posted from our ajax calls in bestBuy.js to render the right data
+const db = require('../models');
 
 module.exports = function (app) {
   // Load home index page
