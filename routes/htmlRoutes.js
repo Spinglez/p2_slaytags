@@ -1,4 +1,6 @@
 // in this file, we would use the database to access the data posted from our ajax calls in bestBuy.js to render the right data
+const db = require('../models');
+const user = require('../public/js/main.js');
 
 module.exports = function (app) {
   // Load home index page
@@ -10,6 +12,7 @@ module.exports = function (app) {
 
   // Load home results page
   app.get('/app', function (req, res) {
+    user.userTransfer();
     res.render('app', {
       // add handlebars attributes here
 
