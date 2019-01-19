@@ -3,7 +3,7 @@ module.exports = function(sequelize, DataTypes) {
     // Giving the Author model a name of type STRING
     firstName: DataTypes.STRING,
     lastName: DataTypes.STRING,
-    acessToken: DataTypes.STRING
+    accessToken: DataTypes.STRING
   });
 
   return Users;
