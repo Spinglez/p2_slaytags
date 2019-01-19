@@ -31,4 +31,10 @@ module.exports = function (app) {
       res.json(dbProducts);
     });
   });
+
+  app.post('/api/users', function (req, res) {
+    db.Users.create(req.body).then(dbUsers => {
+      res.json(dbUsers);
+    });
+  });
 };
