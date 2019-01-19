@@ -1,5 +1,4 @@
 // This is where we would define the buttons
-const keys = require('../keys');
 let $submitBtn = $('#submit');
 
 // Function for creating a new list row for a best buy product

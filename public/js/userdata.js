@@ -17,22 +17,25 @@ if (window.location.pathname === '/app') {
   }, 5000);
 }
 
-const submitButton = $("#search");
+const submitButton = document.getElementById("search");
 
+// console.log(submitButton);
 
-submitButton.on('click', function () {
+submitButton.addEventListener('click', function () {
   console.log('clicked submit button!');
-  
-  const userInput = submitButton.val().trim();
 
-  queryURL = 'https://api.bestbuy.com/v1/products(name=' + userInput + '*)?show=sku,name,salePrice&apiKey=' + keys.parsed.BESTBUY_KEY;
+  const userInput = document.getElementById("search-item").value;
+
   // imaginary api endpoint
   $.ajax({
     // request to direct to app
     url: '/api/products',
     type: 'POST',
-    data: queryURL
-  }).then(function (response) {
+    data: {userInput: userInput}
+  }).then(function (response,error) {
+    if(error){
+      console.log("error is:", error);
+    }
     // store data in results
     console.log(response);
 
