@@ -9,23 +9,13 @@
 @import "layout/navbar";
 
 
-// .list-group-item {
-//   line-height: 2.5;
+.list-group-item {
+  line-height: 2.5;
 
 
 .container{
     max-width: 960px;
 }
-
-// .jumbotron{
-//     max-width: 960px;
-//     height: 450px;
-// }
-
-// .result-container{
-//     max-width: 960px;
-//     height: auto;
-// }
 
 .btn-outline-secondary{
     color: $color-white;
@@ -37,10 +27,23 @@
 }
 .u-margin-bottom-small {margin-bottom: 1.6rem !important;}
 .u-margin-bottom-medium {margin-bottom: 4rem !important;}
-
+.u-margin-bottom-big {margin-bottom: 8rem !important;}
+.u-margin-top-big {margin-top: 8rem !important;}
+.u-padding-top-big {padding-top: 8rem !important;}
 
 
 .search,
 .btn-small {
     color: $color-grey-dark;
+}
+
+main {
+    background-color: rgb(222, 232, 215);
+    margin-top: -20vh;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+.btn-style{
+    text-shadow: $text-shadow;
 }
