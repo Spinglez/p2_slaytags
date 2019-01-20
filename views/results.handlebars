@@ -1,6 +1,6 @@
 <header class="gallery" id="gallery">
     <form class="form-inline my-2 my-lg-0" action="/app" method="get">
-    <button id = "home" class="btn btn-dark my-2 my-sm-0"type="submit">Back Home</button>
+        <button id="home" class="btn btn-dark my-2 my-sm-0" type="submit">Back Home</button>
     </form>
     <div class="gallery__img">
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
@@ -26,10 +26,11 @@
 
 </header>
 
-    {{!-- After User search - render Bestbuy and Walmart items HERE --}}
+{{!-- After User search - render Bestbuy and Walmart items HERE --}}
+<main>
     <section class="section-result u-margin-bottom-medium">
-        <div class="u-center-text u-margin-bottom-big">
-            <h2 class="heading-secondary">Result</h2>
+        <div class="u-center-text u-padding-top-medium">
+            <h2 class="heading-secondary u-margin-bottom-medium">Results</h2>
             <div class="row">
                 {{!-- BESTBUY column --}}
                 <div class="col">
@@ -40,16 +41,15 @@
                             <li><b>Product Number {{@key}}: </b>{{this.name}}</li>
                             <li><b>SKU #: </b>{{this.sku}} </li>
                             <li><b>Price: </b>{{this.price}}</li>
+                            <br>
                             {{/each}}
                         </ul>
-
                     </div>
-
                 </div>
 
                 {{!-- WALMART column --}}
                 <div class="col">
-                    <h3 class="heading-tertiary u-margin-bottom-small">Walmart</h3>
+                    <h3 class="heading-tertiary u-margin-bottom-small">eBay's Top Results</h3>
                     <div class="list-item" id="walmart-item">
 
                         <ul id="example-list" class="list-group">

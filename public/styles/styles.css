@@ -86,6 +86,10 @@
     transform: skewX(2deg) skewX(15deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
 
+.heading-tertiary {
+  font-weight: 700;
+  text-transform: uppercase; }
+
 .gallery {
   height: 95vh;
   background-image: linear-gradient(to right bottom, rgba(252, 144, 125, 0.6), rgba(207, 55, 28, 0.6)), url(../../img/plant.jpg);
@@ -190,7 +194,9 @@
 .u-padding-top-big {
   padding-top: 8rem !important; }
 
-.search,
+.u-padding-top-medium {
+  padding-top: 6rem !important; }
+
 .btn-small {
   color: #4e4e4e; }
 
