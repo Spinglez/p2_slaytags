@@ -28,11 +28,8 @@ module.exports = function (app) {
   });
 
   app.post('/api/products', function (req, res) {
-    console.log(req.body.userInput)
     bestBuy(req.body.userInput);
-    // db.Products.create().then(function (dbProducts) {
-    //   res.json(dbProducts);
-    // });
+    
   });
 
   app.post('/api/users', function (req, res) {
