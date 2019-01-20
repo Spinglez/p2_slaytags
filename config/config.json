@@ -1,9 +1,7 @@
 {
   "development": {
     "username": "root",
-
     "password": "tam89",
-
     "database": "slaydb",
     "host": "localhost",
     "dialect": "mysql"
