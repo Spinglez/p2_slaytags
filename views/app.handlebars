@@ -70,9 +70,9 @@
 
 {{!-- How to use box --}}
 <main>
-    <div class="container">
-        <section class="section-introduce u-margin-bottom-medium">
-            <div class="u-center-text">
+    <section class="section-introduce u-margin-bottom-medium">
+        <div class="container ">
+            <div class="u-center-text u-padding-top-big">
 
                 <h2 class="heading-secondary">Let's get started</h2>
                 <br>
@@ -99,35 +99,61 @@
                 </div>
 
             </div>
-        </section>
+        </div>
+    </section>
 
-        <hr>
+    <hr>
 
-        {{!-- After User search - render Bestbuy and Walmart items HERE --}}
-        <section class="section-result u-margin-bottom-medium">
-            <div class="u-center-text u-margin-bottom-big">
-                <h2 class="heading-secondary">Result</h2>
-                <div class="row">
-                    {{!-- BESTBUY column --}}
-                    <div class="col">
-                        <h3 class="heading-tertiary u-margin-bottom-small">BestBuy</h3>
-                        <div class="list-item" id="bestBuy-item">
+    {{!-- After User search - render Bestbuy and Walmart items HERE --}}
+    <section class="section-result u-margin-bottom-medium">
+        <div class="u-center-text u-margin-bottom-big">
+            <h2 class="heading-secondary">Result</h2>
+            <div class="row">
+                {{!-- BESTBUY column --}}
+                <div class="col">
+                    <h3 class="heading-tertiary u-margin-bottom-small">BestBuy</h3>
+                    <div class="list-item" id="bestBuy-item">
 
-                        </div>
+                        <ul id="example-list" class="list-group">
+                            {{#each products}}
+                            <li data-id="{{this.id}}" class="list-group-item">
+                                <a href="example/{{this.id}}">{{this.text}}</a>
+                                <button class="btn btn-danger float-right delete">ｘ</button>
+                            </li>
+                            {{/each}}
+                        </ul>
 
                     </div>
 
+<<<<<<< HEAD
                     {{!-- WALMART column --}}
                     <div class="col">
                         <h3 class="heading-tertiary u-margin-bottom-small">eBay</h3>
                         <div class="list-item" id="eBay-item">
+=======
+                </div>
 
-                        </div>
+                {{!-- WALMART column --}}
+                <div class="col">
+                    <h3 class="heading-tertiary u-margin-bottom-small">Walmart</h3>
+                    <div class="list-item" id="walmart-item">
+>>>>>>> 44b7205c926a1a3aff2cdb4eca3162126acc503b
+
+                        <ul id="example-list" class="list-group">
+                            {{#each products}}
+                            <li data-id="{{this.id}}" class="list-group-item">
+                                <a href="example/{{this.id}}">{{this.text}}</a>
+                                <button class="btn btn-danger float-right delete">ｘ</button>
+                            </li>
+                            {{/each}}
+                        </ul>
 
                     </div>
+
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
     </div>
     {{!-- End container div --}}
