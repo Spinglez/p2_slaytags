@@ -114,8 +114,7 @@
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
-  top: 50%;
-  left: 50%; }
+  margin-top: 18%; }
 
 .text {
   font-size: 6rem;
@@ -132,7 +131,7 @@
   height: 100%;
   width: 100%;
   z-index: -1;
-  opacity: .20;
+  opacity: .5;
   overflow: hidden; }
   .bg-video__content {
     height: 100%;
@@ -162,6 +161,9 @@
 
 .navigation__link:hover, .navigation__link:active {
   color: tomato; }
+
+.list-group-item {
+  line-height: 2.5; }
 
 .container {
   max-width: 960px; }
