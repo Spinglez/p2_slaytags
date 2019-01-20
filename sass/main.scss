@@ -11,7 +11,7 @@
 
 .list-group-item {
   line-height: 2.5;
-
+}
 
 .container{
     max-width: 960px;
@@ -37,11 +37,23 @@
     color: $color-grey-dark;
 }
 
+.form-control-lg {
+    width: 150%;
+}
+
+.btn {
+    
+    &--animated{
+        animation: roll-in-blurred-top 1s ease-out .75s;
+        animation-fill-mode: backwards;
+    }
+}
+
 main {
     background-color: rgb(222, 232, 215);
     margin-top: -20vh;
-    padding-left: 5rem;
-    padding-right: 5rem;
+    padding: 8rem;
+  
 }
 
 .btn-style{
