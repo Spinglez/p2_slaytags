@@ -6,8 +6,9 @@ const axios = require('axios');
 const xml = require('xml');
 // const xmlString = xml(xmlObject, options);
 
-function addEbayProducts(userInput) {
+function addEbayProduct(userInput) {
 
+    // This link is working on Postman
     queryURL = 'http://open.api.ebay.com/shopping?callname=FindProducts&responseencoding=JSON&appid=TamTran-SlayTags-PRD-4392af54d-d1615769&siteid=0&version=967&QueryKeywords=iphone&AvailableItemsOnly=true&MaxEntries=3';
     axios.get(queryURL).then(res => {
         console.log(res);
@@ -24,6 +25,26 @@ function addEbayProducts(userInput) {
     });
 }
 
+function addEbayItem(userInput) {
+
+    // This link is working on Postman
+    queryURL = 'http://open.api.ebay.com/shopping?callname=GetSingleItem&responseencoding=JSON&appid=TamTran-SlayTags-PRD-4392af54d-d1615769&siteid=0&version=967&ItemID=223309823941&IncludeSelector=ConvertedCurrentPrice';
+    axios.get(queryURL).then(res => {
+        console.log(res);
+    });
+
+    return $.ajax({
+        // request to direct to app
+        url: queryURL,
+        type: 'GET'
+    }).then(function (response) {
+        // store data in results
+        var results = response.data;
+        console.log(results);
+    });
+}
+
+// This is a table for FindProduct
 function createProductRow(product) {
     var newTr = $('<tr>');
     newTr.data('product', product);
@@ -34,6 +55,16 @@ function createProductRow(product) {
     newTr.append('<td>' + product.StockPhotoURL + '</td>');
 
     return newTr;
+}
+
+// This a table for getSingleItem
+function createItemRow(item) {
+    var newTr = $('<tr>');
+    newTr.data('item', item);
+    newTr.append('<td>' + Item.Title + '</td>');
+    newTr.append('<td>' + Item.ItemID + '</td>');
+    newTr.append('<td>' + Item.PictureURL + '</td>');
+    newTr.append('<td>' + Item.ConvertedCurrentPrice + '</td>');
 }
 
 function getProducts() {
