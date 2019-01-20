@@ -1,0 +1,77 @@
+<header class="gallery" id="gallery">
+    <form class="form-inline my-2 my-lg-0" action="/app" method="get">
+    <button id = "home" class="btn btn-dark my-2 my-sm-0"type="submit">Back Home</button>
+    </form>
+    <div class="gallery__img">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../img/work.jpg" class="d-block  mx-auto" alt="work">
+                </div>
+                <div class="carousel-item">
+                    <img src="../img/desk.jpg" class="d-block  mx-auto" alt="desk">
+                </div>
+                <div class="carousel-item">
+                    <img src="../img/oldmachine.jpg" class="d-block  mx-auto" alt="old machine">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="gallery__text-box">
+        <h1 class="heading-primary">
+            <span class="heading-primary--main">Your Results</span>
+        </h1>
+    </div>
+
+</header>
+
+    {{!-- After User search - render Bestbuy and Walmart items HERE --}}
+    <section class="section-result u-margin-bottom-medium">
+        <div class="u-center-text u-margin-bottom-big">
+            <h2 class="heading-secondary">Result</h2>
+            <div class="row">
+                {{!-- BESTBUY column --}}
+                <div class="col">
+                    <h3 class="heading-tertiary u-margin-bottom-small">BestBuy's Top Results</h3>
+                    <div class="list-item" id="bestBuy-item">
+                        <ul id="example-list" class="list-group">
+                            {{#each entries}}
+                            <li><b>Product Number {{@key}}: </b>{{this.name}}</li>
+                            <li><b>SKU #: </b>{{this.sku}} </li>
+                            <li><b>Price: </b>{{this.price}}</li>
+                            {{/each}}
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                {{!-- WALMART column --}}
+                <div class="col">
+                    <h3 class="heading-tertiary u-margin-bottom-small">Walmart</h3>
+                    <div class="list-item" id="walmart-item">
+
+                        <ul id="example-list" class="list-group">
+                            {{#each products}}
+                            <li data-id="{{this.id}}" class="list-group-item">
+                                <a href="example/{{this.id}}">{{this.text}}</a>
+                                <button class="btn btn-danger float-right delete">ｘ</button>
+                            </li>
+                            {{/each}}
+                        </ul>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </div>
+</main>
+
+
+{{!-- <button type="button" class="btn btn-primary">Send <i class="fas fa-arrow-right"></i></button> --}}
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

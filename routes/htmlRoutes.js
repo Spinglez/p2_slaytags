@@ -11,10 +11,19 @@ module.exports = function (app) {
 
   // Load home results page
   app.get('/app', function (req, res) {
-    res.render('app', {
-      // add handlebars attributes here
+    res.render('app');
+  });
 
-    });
+  app.get('/results', function (req, res) {
+    db.Products.findAll({
+      limit: 10,
+      order: [['createdAt', 'DESC']]
+    })
+      .then(function (entries) {
+        res.render('results',
+          { entries: entries }
+        )
+      })
   });
 
   // Load wishlist page

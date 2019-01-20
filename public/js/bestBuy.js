@@ -27,8 +27,6 @@ function getProducts() {
     for (let i = 0; i < results.length; i++) {
       rowsToAdd.push(createAuthorRow(results[i]));
     }
-    // add rows through to handlebars
-    //  ...
     nameInput.val('');
   });
 }
