@@ -3,9 +3,7 @@ module.exports = function(sequelize, DataTypes) {
     // Giving the Author model a name of type STRING
     name: DataTypes.STRING,
     sku: DataTypes.INTEGER,
-    price: DataTypes.FLOAT,
-    customerReviewAverage: DataTypes.FLOAT,
-    customerReviewCount: DataTypes.INTEGER
+    price: DataTypes.FLOAT
   });
 
   return Products;

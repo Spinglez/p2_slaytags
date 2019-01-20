@@ -2,6 +2,7 @@ const axios = require('axios');
 const dotenv = require('dotenv');
 var parser = require('fast-xml-parser');
 var he = require('he');
+const db = require('../models');
 
 var options = {
   attributeNamePrefix: "@_",
@@ -26,21 +27,25 @@ let keys = dotenv.config();
 
 function bestBuyQuery(userInput) {
 
-  console.log("userinput ", userInput);
   queryURL = 'https://api.bestbuy.com/v1/products(name=' + userInput + '*)?show=sku,name,salePrice&apiKey=' + keys.parsed.BESTBUY_KEY;
 
-  console.log("query url", queryURL);
-
   axios.get(queryURL).then(res => {
-    if (parser.validate(res.data) === true) { //optional (it'll return an object in case it's not valid)
+    if (parser.validate(res.data) === true) { 
       var jsonObj = parser.parse(res.data, options);
     }
-
-    // Intermediate obj
     var tObj = parser.getTraversalObj(res.data, options);
     var jsonObj = parser.convertToJson(tObj, options);
+    for (i = 0; i < jsonObj.products.product.length; i++) {
 
-    console.log(jsonObj);
+      db.Products.create({
+        name: jsonObj.products.product[i].name,
+        sku: jsonObj.products.product[i].sku,
+        price: jsonObj.products.product[i].salePrice
+      }).then(function (dbProducts) {
+        console.log(dbProducts);
+      });
+    }
   });
+
 }
 module.exports = bestBuyQuery;
