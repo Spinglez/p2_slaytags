@@ -10,9 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
         responseType: 'token id_token',
         scope: 'openid profile',
     });
-    var loginStatus = document.querySelector('.container h4');
     
-    console.log(location.pathname);
     if(location.pathname === "/"){
         var loginBtn = document.getElementById('qsLoginBtn');
         loginBtn.addEventListener('click', function (e) {
@@ -21,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
             webAuth.authorize();
         });
     }
-    else if(location.pathname === "/app"){
+    if(location.pathname === "/app"){
         var logoutBtn = document.getElementById('qsLogoutBtn');
         logoutBtn.addEventListener('click', logout);
     }
@@ -60,7 +58,6 @@ document.addEventListener('DOMContentLoaded', function () {
             if (authResult && authResult.accessToken && authResult.idToken) {
                 localStorage.setItem('firstName', authResult.idTokenPayload.given_name);
                 localStorage.setItem('lastName', authResult.idTokenPayload.family_name);
-                window.location.pathname = '/app';
                 setSession(authResult);
             } else if (err) {
                 console.log(err);

@@ -15,18 +15,13 @@ if (window.location.pathname === '/app') {
         console.log(result);
       })
   }, 5000);
-}
+
 
 const submitButton = document.getElementById("search");
 
-// console.log(submitButton);
-
 submitButton.addEventListener('click', function () {
-  console.log('clicked submit button!');
-
   const userInput = document.getElementById("search-item").value;
 
-  // imaginary api endpoint
   $.ajax({
     // request to direct to app
     url: '/api/products',
@@ -36,9 +31,16 @@ submitButton.addEventListener('click', function () {
     if(error){
       console.log("error is:", error);
     }
-    // store data in results
     console.log(response);
-
   });
 })
+}
+
+// if(window.location.pathname === "/results"){
+//   var counter = 2;
+//   while(counter > 0){
+//   setTimeout(location.reload(), 2000)
+//   counter--;
+//   }
+// }
 
