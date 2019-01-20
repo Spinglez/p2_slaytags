@@ -1,8 +1,10 @@
 // This is where we would define the buttons
-const keys = require('../keys');
+// const keys = require('../keys');
+const dotenv = require('dotenv');
+
 const axios = require('axios');
 const xml = require('xml');
-const xmlString = xml(xmlObject, options);
+// const xmlString = xml(xmlObject, options);
 
 function addEbayProducts(userInput) {
 
