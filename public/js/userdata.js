@@ -16,22 +16,22 @@ if (window.location.pathname === '/app') {
   }, 5000);
 
 
-const submitButton = document.getElementById("search");
+  const submitButton = document.getElementById("search");
 
-submitButton.addEventListener('click', function () {
-  const userInput = document.getElementById("search-item").value;
+  submitButton.addEventListener('click', function () {
+    const userInput = document.getElementById("search-item").value;
 
-  $.ajax({
-    // request to direct to app
-    url: '/api/products',
-    type: 'POST',
-    data: {userInput: userInput}
-  }).then(function (response,error) {
-    if(error){
-      console.log("error is:", error);
-    }
-  });
-})
+    $.ajax({
+      // request to direct to app
+      url: '/api/products',
+      type: 'POST',
+      data: { userInput: userInput }
+    }).then(function (response, error) {
+      if (error) {
+        console.log("error is:", error);
+      }
+    });
+  })
 }
 
 
