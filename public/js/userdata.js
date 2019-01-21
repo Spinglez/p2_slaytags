@@ -12,7 +12,6 @@ if (window.location.pathname === '/app') {
     }
     $.post("/api/users", userData)
       .then(function (result) {
-        console.log(result);
       })
   }, 5000);
 
@@ -31,16 +30,8 @@ submitButton.addEventListener('click', function () {
     if(error){
       console.log("error is:", error);
     }
-    console.log(response);
   });
 })
 }
 
-// if(window.location.pathname === "/results"){
-//   var counter = 2;
-//   while(counter > 0){
-//   setTimeout(location.reload(), 2000)
-//   counter--;
-//   }
-// }
 
