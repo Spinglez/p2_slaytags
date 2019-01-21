@@ -14,11 +14,17 @@
 .u-margin-top-big {
   margin-top: 8rem !important; }
 
+.u-margin-top-small {
+  margin-top: 4rem !important; }
+
 .u-padding-top-big {
   padding-top: 8rem !important; }
 
 .u-padding-top-medium {
   padding-top: 6rem !important; }
+
+.u-padding-top-small {
+  padding-top: 2rem !important; }
 
 @keyframes moveInTop {
   0% {
