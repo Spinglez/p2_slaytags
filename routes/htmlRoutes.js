@@ -16,12 +16,25 @@ module.exports = function (app) {
 
   app.get('/results', function (req, res) {
     db.Products.findAll({
-      limit: 10,
+      limit: 20,
       order: [['createdAt', 'DESC']]
     })
       .then(function (entries) {
+        const bestBuyEntries = [];
+        const ebayEntries = []
+        for(i = 0; i < entries.length; i++){
+          if(entries[i].provider === 'ebay'){
+            ebayEntries.push(entries[i]);
+          }
+          else{
+            bestBuyEntries.push(entries[i])
+          }
+        }
         res.render('results',
-          { entries: entries }
+          { 
+            bbEntries: bestBuyEntries,
+            ebEntries: ebayEntries
+           }
         )
       })
   });

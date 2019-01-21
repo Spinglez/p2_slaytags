@@ -1,10 +1,9 @@
 module.exports = function(sequelize, DataTypes) {
   var Products = sequelize.define('Products', {
-    // Giving the Author model a name of type STRING
+    provider: DataTypes.STRING,
     name: DataTypes.STRING,
-    sku: DataTypes.INTEGER,
+    sku: DataTypes.STRING,
     price: DataTypes.FLOAT
   });
-
   return Products;
 };
