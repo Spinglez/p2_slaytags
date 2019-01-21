@@ -3,7 +3,7 @@
     <nav class="navbar navbar-expand-lg navigation__nav" id="navbar">
         <div class="container-fluid">
 
-            <a class="navbar-brand navigation__logo" href="#"><img src="../img/Logo_Slaytag.png" style="width: 45px; height: 45px;"
+            <a class="navbar-brand navigation__logo" href="#"><img src="../img/Logo_Slaytag.png" style="width: 50px; height: 50px;"
                     alt="logo" id="logo"></a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
@@ -27,7 +27,7 @@
             </div>
 
             <form class="form-inline my-2 my-lg-0" action="/app" method="get">
-                <button id="home" class="btn btn-sm btn-outline-secondary" type="submit">Back Home</button>
+                <button id="home" class="btn btn-sm btn-outline-secondary" type="submit"><i class="fas fa-home"></i></button>
             </form>
             <form class="form-inline">
                 <a>
@@ -38,10 +38,8 @@
         </div>
         <!--End container-fluid-->
     </nav>
-    <!-- END NAVBAR -->
 </div>
-
-
+<!-- END NAVBAR -->
 
 
 <header class="gallery" id="gallery">
@@ -72,44 +70,54 @@
 
 </header>
 
-{{!-- After User search - render Bestbuy and Walmart items HERE --}}
+{{!-- After User search - render Bestbuy and eBay items go HERE --}}
 <main>
     <section class="section-result u-margin-bottom-medium">
         <div class="u-center-text u-padding-top-medium">
-            <h2 class="heading-secondary u-margin-bottom-medium">Results</h2>
-            <div class="row">
-                {{!-- BESTBUY column --}}
-                <div class="col">
-                    <h3 class="heading-tertiary u-margin-bottom-small">BestBuy's Top Results</h3>
+            <h2 class="heading-secondary u-margin-bottom-small">Results</h2>
+        </div>
+        <div class="row u-center-text">
+
+            {{!-- BESTBUY column --}}
+            <div class="col">
+                <h3 class="heading-tertiary u-margin-bottom-small">{{this.userInput}}
+                    <img src="../img/bestBuy-logo.png" style="width: 101px; height: auto;" alt="BestBuy logo">
+                </h3>
+                <div class="card__details">
                     <div class="list-item" id="bestBuy-item">
                         <ul id="example-list" class="list-group">
                             {{#each bbEntries}}
-                            <li><b>Product Number {{@key}}: </b>{{this.name}}</li>
-                            <li><b>SKU #: </b>{{this.sku}} </li>
-                            <li><b>Price: </b>{{this.price}}</li>
+                            <li class="card-box card-box--product__bestbuy"><b><em>Product No.{{@key}}: </em></b>{{this.name}}</li>
+                            <li class="card-box card-box--sku"><b>SKU #: </b>{{this.sku}} </li>
+                            <li class="card-box card-box--price"><b>Price: $</b>{{this.price}}</li>
                             <br>
                             {{/each}}
                         </ul>
                     </div>
                 </div>
+            </div>
 
-                {{!-- WALMART column --}}
-                <div class="col">
-                    <h3 class="heading-tertiary u-margin-bottom-small">eBay's Top Results</h3>
-                    <div class="list-item" id="walmart-item">
-
+            {{!-- EBAY column --}}
+            <div class="col">
+                <h3 class="heading-tertiary u-margin-bottom-medium">{{this.userInput}}
+                    <img src="../img/eBay-logo.png" style="width: 149px; height: auto;" alt="BestBuy logo">
+                </h3>
+                <div class="card__details">
+                    <div class="list-item" id="eBay-item">
                         <ul id="example-list" class="list-group">
                             {{#each ebEntries}}
-                            <li><b>Product Number {{@key}}: </b>{{this.name}}</li>
-                            <li><b>SKU #: </b>{{this.sku}} </li>
-                            <li><b>Price: </b>{{this.price}}</li>
+                            <li class="card-box card-box--product__ebay"><b><em>Product No.{{@key}}: </em></b>{{this.name}}</li>
+                            <li class="card-box card-box--sku"><b>SKU #: </b>{{this.sku}} </li>
+                            <li class="card-box card-box--price"><b>Price: $</b>{{this.price}}</li>
+                            <br>
                             {{/each}}
                         </ul>
                     </div>
-
                 </div>
             </div>
+
         </div>
+
     </section>
 
     </div>

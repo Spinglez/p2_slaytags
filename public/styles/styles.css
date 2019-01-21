@@ -1,3 +1,25 @@
+.u-center-text {
+  text-align: center !important;
+  padding: 5px; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem !important; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important; }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem !important; }
+
+.u-margin-top-big {
+  margin-top: 8rem !important; }
+
+.u-padding-top-big {
+  padding-top: 8rem !important; }
+
+.u-padding-top-medium {
+  padding-top: 6rem !important; }
+
 @keyframes moveInTop {
   0% {
     opacity: 0;
@@ -73,9 +95,9 @@
     text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0; }
 
 .heading-secondary {
-  font-size: 2.5rem;
+  font-size: 2.7rem;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 700;
   display: inline-block;
   background-image: linear-gradient(to right, #fc907d, #cf371c);
   -webkit-background-clip: text;
@@ -89,6 +111,39 @@
 .heading-tertiary {
   font-weight: 700;
   text-transform: uppercase; }
+  .heading-tertiary__bestbuy {
+    color: rgba(11, 85, 196, 0.384); }
+  .heading-tertiary__ebay {
+    color: rgba(17, 169, 116, 0.301); }
+
+.card-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 3rem;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4); }
+  .card-box--product__bestbuy {
+    background-color: rgba(11, 85, 196, 0.384); }
+  .card-box--product__ebay {
+    background-color: rgba(17, 169, 116, 0.301); }
+  .card-box--sku {
+    color: #fc907d;
+    font-size: 5px; }
+  .card-box--price {
+    color: #cf371c; }
+
+.card__details {
+  padding: 2rem; }
+  .card__details ul {
+    list-style: none;
+    width: 80%;
+    margin: 0 auto; }
+    .card__details ul li {
+      text-align: center;
+      font-size: 1.4rem;
+      padding: 1rem; }
+      .card__details ul li:not(:last-child) {
+        border-bottom: 1px solid #bebebe; }
 
 .gallery {
   height: 95vh;
@@ -175,28 +230,6 @@
 .btn-outline-secondary {
   color: white; }
 
-.u-center-text {
-  text-align: center !important;
-  padding: 5px; }
-
-.u-margin-bottom-small {
-  margin-bottom: 1.6rem !important; }
-
-.u-margin-bottom-medium {
-  margin-bottom: 4rem !important; }
-
-.u-margin-bottom-big {
-  margin-bottom: 8rem !important; }
-
-.u-margin-top-big {
-  margin-top: 8rem !important; }
-
-.u-padding-top-big {
-  padding-top: 8rem !important; }
-
-.u-padding-top-medium {
-  padding-top: 6rem !important; }
-
 .btn-small {
   color: #4e4e4e; }
 
@@ -214,7 +247,3 @@ main {
 
 .btn-style {
   text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1); }
-
-li{
-  list-style-type: none;
-}
