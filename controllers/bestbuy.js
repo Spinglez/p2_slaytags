@@ -37,9 +37,8 @@ function bestBuyQuery(userInput) {
     var jsonObj = parser.convertToJson(tObj, options);
     for (i = 0; i < jsonObj.products.product.length; i++) {
       
-      // console.log(jsonObj.products.product[i]);
-
-      db.BBProducts.create({
+      db.Products.create({
+        provider: "best_buy",
         name: jsonObj.products.product[i].name,
         sku: jsonObj.products.product[i].sku,
         price: jsonObj.products.product[i].salePrice

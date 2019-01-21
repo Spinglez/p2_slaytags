@@ -30,7 +30,6 @@ submitButton.addEventListener('click', function () {
     if(error){
       console.log("error is:", error);
     }
-    // console.log(response);
   });
 })
 }

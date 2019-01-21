@@ -15,26 +15,26 @@ module.exports = function (app) {
   });
 
   app.get('/results', function (req, res) {
-    db.BBProducts.findAll({
-      limit: 10,
+    db.Products.findAll({
+      limit: 20,
       order: [['createdAt', 'DESC']]
     })
       .then(function (entries) {
+        const bestBuyEntries = [];
+        const ebayEntries = []
+        for(i = 0; i < entries.length; i++){
+          if(entries[i].provider === 'ebay'){
+            ebayEntries.push(entries[i]);
+          }
+          else{
+            bestBuyEntries.push(entries[i])
+          }
+        }
         res.render('results',
-          { bbEntries: entries }
-        )
-      })
-  });
-
-  app.get('/results', function (req, res) {
-    console.log("second results call for ebay working!")
-    db.EBProducts.findAll({
-      limit: 10,
-      order: [['createdAt', 'DESC']]
-    })
-      .then(function (entries) {
-        res.render('results',
-          { ebEntries: entries }
+          { 
+            bbEntries: bestBuyEntries,
+            ebEntries: ebayEntries
+           }
         )
       })
   });
