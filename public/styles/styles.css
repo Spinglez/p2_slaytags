@@ -101,7 +101,7 @@
     text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0; }
 
 .heading-secondary {
-  font-size: 2.7rem;
+  font-size: 2.8rem;
   text-transform: uppercase;
   font-weight: 700;
   display: inline-block;
@@ -253,3 +253,6 @@ main {
 
 .btn-style {
   text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1); }
+
+.form-style {
+  width: 65%; }

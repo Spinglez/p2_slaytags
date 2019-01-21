@@ -84,7 +84,7 @@
 <main>
     <section class="section-introduce u-margin-bottom-medium">
         <div class="container">
-            <div class="u-center-text u-padding-top-big">
+            <div class="u-center-text u-padding-top-medium">
 
                 <h2 class="heading-secondary">Let's get started</h2>
                 <br>
@@ -105,14 +105,19 @@
             </div>
 
             {{!-- Search box --}}
-            <div class="search">
-                <label for="form-control">Search your favorite electronics or related tech products</label>
-                <form class="form-inline my-2 my-lg-0" action="/results" method="get">
-                    <input class="form-control form-control-lg mr-sm-2" id="search-item" type="search" placeholder="Electronic item"
-                        aria-label="Search">
-                    <button id="search" class="btn btn-dark my-2 my-sm-0" type="submit">Search</button>
-                </form>
-            </div>
+
+            <form class="form-style my-2 my-lg-0" action="/results" method="get">
+                <div class="search">
+                    <div>
+                        <input class="form-control form-control-lg mr-sm-2" id="search-item" type="search" placeholder="Search your favorite electronics or related tech products"
+                            aria-label="Search">
+                    </div>
+                    <div>
+                        <button id="search" class="btn btn-dark" type="submit">Search</button>
+                    </div>
+                </div>
+            </form>
+
         </div>
     </section>
 </main>
