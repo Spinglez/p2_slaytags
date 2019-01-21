@@ -1,5 +1,6 @@
 const db = require('../models');
-const bestBuy = require('../controllers/bestbuy');
+const bestBuy = require('../controllers/bestBuy');
+const eBay = require('../controllers/ebay');
 
 module.exports = function (app) {
   app.get('/api/products', function (req, res) {
@@ -29,7 +30,7 @@ module.exports = function (app) {
 
   app.post('/api/products', function (req, res) {
     bestBuy(req.body.userInput);
-    
+    eBay(req.body.userInput);
   });
 
   app.post('/api/users', function (req, res) {

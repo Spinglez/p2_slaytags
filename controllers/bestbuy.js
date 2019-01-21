@@ -37,9 +37,9 @@ function bestBuyQuery(userInput) {
     var jsonObj = parser.convertToJson(tObj, options);
     for (i = 0; i < jsonObj.products.product.length; i++) {
       
-      console.log(jsonObj.products.product[i]);
+      // console.log(jsonObj.products.product[i]);
 
-      db.Products.create({
+      db.BBProducts.create({
         name: jsonObj.products.product[i].name,
         sku: jsonObj.products.product[i].sku,
         price: jsonObj.products.product[i].salePrice
@@ -50,4 +50,4 @@ function bestBuyQuery(userInput) {
   });
 
 }
-module.exports = bestBuyQuery;
+module.exports =  bestBuyQuery;
