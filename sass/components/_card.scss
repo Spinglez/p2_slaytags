@@ -1,35 +1,39 @@
 .card-box{
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.7rem;
     background-color: rgba($color-white, .8);
-    // font-size: 1rem;
     padding: 3rem;
     text-align: center;
     border-radius: 3px;
     box-shadow: 0 1.5rem 4rem $color-black-shadow-4;
 
     &--product{
-        font-family: 'Neuton', serif;
+        
         &__bestbuy{
             background-color: $color-bestbuy;
             height: 170px;
+            
         }
 
         &__ebay{
             background-color: $color-ebay;
             height: 170px;
+            
         }
     }
 
     &--sku{
         color: $color-primary-light;
-        font-size: 5px;
-        font-family: 'Libre Barcode 39 Text', cursive;
+        font-size: 1.7rem !important;
+        letter-spacing: 5px;
+        font-family: 'Pathway Gothic One', sans-serif;
     }
 
     &--price{
         color: $color-primary-dark;
         font-size: 2rem !important;
+        letter-spacing: 2px;
         font-family: 'Teko', sans-serif;
-        letter-spacing: 1px;
     }
 
     &--link{
@@ -47,7 +51,6 @@
         
         li{
             text-align: center;
-            font-size: 1.4rem;
             padding: 1rem;
 
             &:not(:last-child){

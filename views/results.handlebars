@@ -27,8 +27,10 @@
             </div>
 
             <form class="form-inline my-2 my-lg-0" action="/app" method="get">
-                <button id="home" class="btn btn-sm btn-outline-secondary btn--home" title="Back to HOME page" type="submit"><i class="fas fa-home"></i></button>
+                <button id="home" class="btn btn-sm btn-outline-secondary btn--home" title="Back to HOME page" type="submit"><i
+                        class="fas fa-home"></i></button>
             </form>
+
             <form class="form-inline">
                 <a>
                     <button class="btn btn-sm btn-outline-secondary" id="qsLogoutBtn" type="button">Log Out</button>
@@ -44,58 +46,63 @@
 
 {{!-- After User search - render Bestbuy and eBay items go HERE --}}
 <main>
-    <section class="section-result u-margin-bottom-medium">
-        <div class="u-center-text u-padding-top-medium">
-            <h2 class="heading-secondary u-margin-bottom-small">Results</h2>
-        </div>
-        <div class="row u-center-text">
+    {{!-- <div class="container-fuild"> --}}
+        <section class="section-result u-margin-bottom-medium">
+            <div class="u-center-text u-padding-top-medium">
+                <h2 class="heading-secondary u-margin-bottom-small">Results</h2>
+            </div>
+            <div class="row">
 
-            {{!-- BESTBUY column --}}
-            <div class="col">
-                <h3 class="heading-tertiary u-margin-bottom-small">{{this.userInput}}
-                    <img src="../img/bestBuy-logo.png" style="width: 101px; height: auto;" alt="BestBuy-logo">
-                </h3>
-                <div class="card__details">
-                    <div class="list-item" id="bestBuy-item">
-                        <ul id="example-list" class="list-group">
-                            {{#each bbEntries}}
-                            <li class="card-box card-box--product__bestbuy"><b><em>Product No.{{@key}}:  </em></b>{{this.name}}</li>
-                            <li class="card-box card-box--sku"><b>SKU #: </b>{{this.sku}} </li>
-                            <li class="card-box card-box--price"><b>Price: $</b>{{this.price}}</li>
-                            <li class="card-box card-box--link"><a href={{this.url}} class="btn btn-warning btn-bestbuy" role="button">Buy Now</a></li>
-                            <br>
-                            <hr>
-                            {{/each}}
-                        </ul>
+                {{!-- BESTBUY column --}}
+                <div class="col-lg-6 col-md-5 col-sm-12">
+                    <h3 class="heading-tertiary u-margin-bottom-small u-center-text">{{this.userInput}}
+                        <img src="../img/bestBuy-logo.png" style="width: 101px; height: auto;" alt="BestBuy-logo">
+                    </h3>
+                    <div class="card__details">
+                        <div class="list-item" id="bestBuy-item">
+                            <ul id="example-list" class="list-group">
+                                {{#each bbEntries}}
+                                <li class="card-box card-box--product__bestbuy"><b>Product No.{{@key}}: </b>{{this.name}}</li>
+                                <li class="card-box card-box--sku"><b>SKU #: </b>{{this.sku}} </li>
+                                <li class="card-box card-box--price"><b>Price: $</b>{{this.price}}</li>
+                                <li class="card-box card-box--link"><a href={{this.url}} class="btn btn-warning btn-bestbuy"
+                                        role="button">Buy Now</a></li>
+                                <br>
+                                <hr>
+                                {{/each}}
+                            </ul>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+
+                {{!-- EBAY column --}}
+                <div class="col-lg-6 col-md-5 col-sm-12">
+                    <h3 class="heading-tertiary u-margin-bottom-medium u-center-text">{{this.userInput}}
+                        <img src="../img/eBay-logo.png" style="width: 148px; height: auto;" alt="eBay-logo">
+                    </h3>
+                    <div class="card__details">
+                        <div class="list-item" id="eBay-item">
+                            <ul id="example-list" class="list-group">
+                                {{#each ebEntries}}
+                                <li class="card-box card-box--product__ebay"><b>Product No.{{@key}}: </b>{{this.name}}</li>
+                                <li class="card-box card-box--sku"><b>SKU #: </b>{{this.sku}} </li>
+                                <li class="card-box card-box--price"><b>Price: $</b>{{this.price}}</li>
+                                <li class="card-box card-box--link"><a href={{this.url}} class="btn btn-info btn-ebay"
+                                        role="button">Buy
+                                        Now</a></li>
+                                <br>
+                                <hr>
+                                {{/each}}
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                </a>
-            </div>
 
-            {{!-- EBAY column --}}
-            <div class="col">
-                <h3 class="heading-tertiary u-margin-bottom-medium">{{this.userInput}}
-                    <img src="../img/eBay-logo.png" style="width: 148px; height: auto;" alt="eBay-logo">
-                </h3>
-                <div class="card__details">
-                    <div class="list-item" id="eBay-item">
-                        <ul id="example-list" class="list-group">
-                            {{#each ebEntries}}
-                            <li class="card-box card-box--product__ebay"><b><em>Product No.{{@key}}:  </em></b>{{this.name}}</li>
-                            <li class="card-box card-box--sku"><b>SKU #: </b>{{this.sku}} </li>
-                            <li class="card-box card-box--price"><b>Price: $</b>{{this.price}}</li>
-                            <li class="card-box card-box--link"><a href={{this.url}} class="btn btn-info btn-ebay" role="button">Buy Now</a></li>
-                            <br>
-                            <hr>
-                            {{/each}}
-                        </ul>
-                    </div>
-                </div>
             </div>
-
-        </div>
-        {{!-- END ROW div --}}
-    </section>
+            {{!-- END ROW div --}}
+        </section>
+        {{!-- </div> --}}
 </main>
 
 

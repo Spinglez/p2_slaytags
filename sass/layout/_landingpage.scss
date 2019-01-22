@@ -10,11 +10,15 @@
 .text {
     font-size: 6rem;
     color: white;
-    font-weight: 300;
-    font-family: 'Black Ops One', cursive;
+    font-weight: 700;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    text-shadow: 0px 3px 3px rgba(255,255,255,0.5);
 }
 .lead {
-    font-family: 'Saira Extra Condensed', sans-serif;
+    font-family: 'Homenaje', sans-serif;
+    
     text-transform: capitalize;
     font-size: 2rem;
     letter-spacing: 1px;
@@ -39,7 +43,6 @@
         height: 100%;
         width: 100%;
         object-fit: cover;
-
     }
 }
   
