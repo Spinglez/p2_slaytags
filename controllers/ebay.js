@@ -12,6 +12,7 @@ function ebayQuery(userInput) {
         for(i=0; i< res.data.findItemsAdvancedResponse[0].searchResult[0].item.length; i++){
         db.Products.create({
           provider: "ebay",
+          url: res.data.findItemsAdvancedResponse[0].searchResult[0].item[i].viewItemURL[0],
           name: res.data.findItemsAdvancedResponse[0].searchResult[0].item[i].title[0],
           sku: res.data.findItemsAdvancedResponse[0].searchResult[0].item[i].itemId[0],
           price: res.data.findItemsAdvancedResponse[0].searchResult[0].item[i].sellingStatus[0].currentPrice[0].__value__
