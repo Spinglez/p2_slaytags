@@ -10,8 +10,15 @@
 .text {
     font-size: 6rem;
     color: white;
-    font-weight: 700;
-    font-family: 'VT323', monospace;
+    font-weight: 300;
+    font-family: 'Black Ops One', cursive;
+}
+.lead {
+    font-family: 'Saira Extra Condensed', sans-serif;
+    text-transform: capitalize;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    
 }
 
 .highlight {

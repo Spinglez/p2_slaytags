@@ -27,7 +27,7 @@
             </div>
 
             <form class="form-inline my-2 my-lg-0" action="/app" method="get">
-                <button id="home" class="btn btn-sm btn-outline-secondary" type="submit"><i class="fas fa-home"></i></button>
+                <button id="home" class="btn btn-sm btn-outline-secondary btn--home" title="Back to HOME page" type="submit"><i class="fas fa-home"></i></button>
             </form>
             <form class="form-inline">
                 <a>
@@ -59,10 +59,10 @@
                     <div class="list-item" id="bestBuy-item">
                         <ul id="example-list" class="list-group">
                             {{#each bbEntries}}
-                            <li class="card-box card-box--product__bestbuy"><b><em>Product No.{{@key}}: </em></b>{{this.name}}</li>
+                            <li class="card-box card-box--product__bestbuy"><b><em>Product No.{{@key}}:  </em></b>{{this.name}}</li>
                             <li class="card-box card-box--sku"><b>SKU #: </b>{{this.sku}} </li>
                             <li class="card-box card-box--price"><b>Price: $</b>{{this.price}}</li>
-                            <li class="card-box card-box--link"><a href={{this.url}} class="btn btn-info" role="button">Buy Now</a></li>
+                            <li class="card-box card-box--link"><a href={{this.url}} class="btn btn-warning btn-bestbuy" role="button">Buy Now</a></li>
                             <br>
                             <hr>
                             {{/each}}
@@ -75,16 +75,16 @@
             {{!-- EBAY column --}}
             <div class="col">
                 <h3 class="heading-tertiary u-margin-bottom-medium">{{this.userInput}}
-                    <img src="../img/eBay-logo.png" style="width: 149px; height: auto;" alt="eBay-logo">
+                    <img src="../img/eBay-logo.png" style="width: 148px; height: auto;" alt="eBay-logo">
                 </h3>
                 <div class="card__details">
                     <div class="list-item" id="eBay-item">
                         <ul id="example-list" class="list-group">
                             {{#each ebEntries}}
-                            <li class="card-box card-box--product__ebay"><b><em>Product No.{{@key}}: </em></b>{{this.name}}</li>
+                            <li class="card-box card-box--product__ebay"><b><em>Product No.{{@key}}:  </em></b>{{this.name}}</li>
                             <li class="card-box card-box--sku"><b>SKU #: </b>{{this.sku}} </li>
                             <li class="card-box card-box--price"><b>Price: $</b>{{this.price}}</li>
-                            <li class="card-box card-box--link"><a href={{this.url}} class="btn btn-info" role="button">Buy Now</a></li>
+                            <li class="card-box card-box--link"><a href={{this.url}} class="btn btn-info btn-ebay" role="button">Buy Now</a></li>
                             <br>
                             <hr>
                             {{/each}}
