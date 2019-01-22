@@ -23,6 +23,10 @@ document.addEventListener('DOMContentLoaded', function () {
         var logoutBtn = document.getElementById('qsLogoutBtn');
         logoutBtn.addEventListener('click', logout);
     }
+    if(location.pathname === "/results"){
+        var logoutBtn = document.getElementById('qsLogoutBtn');
+        logoutBtn.addEventListener('click', logout);
+    }
 
     function setSession(authResult) {
         // Set the time that the access token will expire at
