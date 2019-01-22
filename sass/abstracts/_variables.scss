@@ -1,10 +1,16 @@
-
+// FONT COLOR
 $color-primary: tomato;
 $color-primary-dark: rgb(207, 55, 28);
 $color-primary-light: rgb(252, 144, 125);
+// ----------------------------------------------------
+// $color-bg: rgb(222, 232, 215);
 
+$color-bestbuy: rgba(11, 85, 196, 0.384);
+$color-ebay: rgba(17, 169, 116, 0.301);
 
 $color-grey-dark: rgb(78, 78, 78);
+$color-grey-light: rgb(190, 190, 190);
+
 
 $color-white: rgb(255, 255, 255);
 $color-white-opacity: rgba(255, 255, 255, 0.74);
@@ -12,6 +18,8 @@ $color-white-opacity: rgba(255, 255, 255, 0.74);
 $color-black: #000;
 $color-black-shadow-15: rgba($color-black, .15);
 $color-black-shadow-4: rgba($color-black, .4);
+
+// TEXT SHADOW
 $text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
 0px 8px 13px rgba(0,0,0,0.1),
 0px 18px 23px rgba(0,0,0,0.1);

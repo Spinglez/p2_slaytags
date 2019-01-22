@@ -1,0 +1,48 @@
+.card-box{
+    background-color: rgba($color-white, .8);
+    // font-size: 1rem;
+    padding: 3rem;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem $color-black-shadow-4;
+
+    &--product{
+
+        &__bestbuy{
+            background-color: $color-bestbuy;
+        }
+
+        &__ebay{
+            background-color: $color-ebay;
+        }
+    }
+
+    &--sku{
+        color: $color-primary-light;
+        font-size: 5px;
+    }
+
+    &--price{
+        color: $color-primary-dark;
+    }
+}
+
+.card__details{
+    padding: 2rem;
+
+    ul{
+        list-style: none;
+        width: 80%;
+        margin: 0 auto;
+        
+        li{
+            text-align: center;
+            font-size: 1.4rem;
+            padding: 1rem;
+
+            &:not(:last-child){
+                border-bottom: 1px solid $color-grey-light;
+            }
+        }
+    }
+}
