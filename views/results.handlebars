@@ -42,47 +42,6 @@
 <!-- END NAVBAR -->
 
 
-<header class="gallery u-padding-top-small" id="gallery">
-    {{!-- I MOVED THIS TO NAVBAR --}}
-    {{!-- <form class="form-inline my-2 my-lg-0" action="/app" method="get">
-        <button id="home" class="btn btn-dark my-2 my-sm-0" type="submit">Back Home</button>
-    </form> --}}
-    <div class="gallery__img">
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="../img/work.jpg" class="d-block  mx-auto" alt="work">
-                </div>
-                <div class="carousel-item">
-                    <img src="../img/desk.jpg" class="d-block  mx-auto" alt="desk">
-                </div>
-                <div class="carousel-item">
-                    <img src="../img/oldmachine.jpg" class="d-block  mx-auto" alt="old machine">
-                </div>
-                <div class="carousel-item">
-                    <img src="../img/phone.jpg" class="d-block  mx-auto" alt="phone">
-                </div>
-                <div class="carousel-item">
-                    <img src="../img/laptop.jpg" class="d-block  mx-auto" alt="laptop">
-                </div>
-                <div class="carousel-item">
-                    <img src="../img/laptop2.jpg" class="d-block  mx-auto" alt="laptop2">
-                </div>
-                <div class="carousel-item">
-                    <img src="../img/konika.jpg" class="d-block  mx-auto" alt="konika">
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="gallery__text-box">
-        <h1 class="heading-primary">
-            <span class="heading-primary--main">Your Results</span>
-        </h1>
-    </div>
-
-</header>
-
 {{!-- After User search - render Bestbuy and eBay items go HERE --}}
 <main>
     <section class="section-result u-margin-bottom-medium">
@@ -105,6 +64,7 @@
                             <li class="card-box card-box--price"><b>Price: $</b>{{this.price}}</li>
                             <li class="card-box card-box--link"><a href={{this.url}} class="btn btn-info" role="button">Buy Now</a></li>
                             <br>
+                            <hr>
                             {{/each}}
                         </ul>
                     </div>
@@ -126,6 +86,7 @@
                             <li class="card-box card-box--price"><b>Price: $</b>{{this.price}}</li>
                             <li class="card-box card-box--link"><a href={{this.url}} class="btn btn-info" role="button">Buy Now</a></li>
                             <br>
+                            <hr>
                             {{/each}}
                         </ul>
                     </div>

@@ -101,7 +101,7 @@
     text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0; }
 
 .heading-secondary {
-  font-size: 2.8rem;
+  font-size: 3.2rem;
   text-transform: uppercase;
   font-weight: 700;
   display: inline-block;
@@ -129,9 +129,11 @@
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4); }
   .card-box--product__bestbuy {
-    background-color: rgba(11, 85, 196, 0.384); }
+    background-color: rgba(11, 85, 196, 0.384);
+    height: 170px; }
   .card-box--product__ebay {
-    background-color: rgba(17, 169, 116, 0.301); }
+    background-color: rgba(17, 169, 116, 0.301);
+    height: 170px; }
   .card-box--sku {
     color: #fc907d;
     font-size: 5px; }

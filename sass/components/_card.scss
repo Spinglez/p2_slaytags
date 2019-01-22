@@ -10,10 +10,12 @@
 
         &__bestbuy{
             background-color: $color-bestbuy;
+            height: 170px;
         }
 
         &__ebay{
             background-color: $color-ebay;
+            height: 170px;
         }
     }
 
@@ -24,6 +26,10 @@
 
     &--price{
         color: $color-primary-dark;
+    }
+
+    &--link{
+        
     }
 }
 
