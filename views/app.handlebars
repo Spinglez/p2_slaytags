@@ -83,8 +83,8 @@
 {{!-- How to use box --}}
 <main>
     <section class="section-introduce u-margin-bottom-medium">
-        <div class="container">
-            <div class="u-center-text u-padding-top-medium">
+        <div class="container u-padding-bottom-medium">
+            <div class="u-center-text">
 
                 <h2 class="heading-secondary">Let's get started</h2>
                 <br>
@@ -96,18 +96,31 @@
                 {{!-- Collapse Instruction --}}
                 <div class="collapse u-margin-bottom-small" id="collapseExample">
                     <div class="card card-body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
-                        squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente
-                        ea proident.
+                        <ul>
+                            <li>Please enter the product you're searching for in the field below.</li>
+                            <li>The more specific of a keyword you enter, the fewer results there will be.</li>
+                            <li>We compare prices between <span><img src="../img/bestBuy-logo.png"
+                                        style="width: 28px; height: auto;" alt="BestBuy-logo"></span> and <span><img
+                                        src="../img/eBay-logo.png" style="width: 39px; height: auto;" alt="eBay-logo">
+                                </span> so
+                                that you can negotiate prices in-store
+                                or online.</li>
+                            <li>The products searched must be within the scope of the electronics category or you may
+                                get few or no results.</li>
+                            <li>-The more specific of a keyword you enter, the fewer results but higher accuracy of
+                                comparisons you get </li>
+                            <span class="card-body__ex">Ex: (2019 iPhone XR New vs. iPhone)</span>
+                        </ul>
                     </div>
                 </div>
 
             </div>
 
             {{!-- Search box --}}
-            <div class="search">
+            <div class="search ">
                 <form class="form-inline my-2 my-lg-0" action="/results" method="get">
-                    <input class="form-control mr-sm-2" id="search-item" type="search" style="width: 88%;" placeholder="Search your favorite electronics or related tech products" aria-label="Search">
+                    <input class="form-control mr-sm-2" id="search-item" type="search" style="width: 88%;" placeholder="Search your favorite electronics or related tech products"
+                        aria-label="Search">
                     <button id="search" class="btn btn-dark my-2 my-sm-0" type="submit">Search</button>
                 </form>
             </div>

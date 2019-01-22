@@ -1,6 +1,5 @@
 .gallery {
-    
-    height: 95vh; 
+    height: 65vh; 
     background-image: linear-gradient(
         to right bottom, 
         rgba($color-primary-light, 0.6), 
@@ -9,8 +8,8 @@
     background-size: cover;
     background-position: top;
     position: relative;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 50vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 50vh, 0 100%);
 
     &__img{
         width: 50%;
@@ -23,7 +22,6 @@
     }
 
     &__text-box{
-        // Add Google Font for Tittle in header here
         position: absolute;
         top: 40%;
         left: 50%;

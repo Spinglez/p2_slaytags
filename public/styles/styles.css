@@ -15,7 +15,7 @@
   margin-top: 8rem !important; }
 
 .u-margin-top-small {
-  margin-top: 4rem !important; }
+  margin-top: 2rem !important; }
 
 .u-padding-top-big {
   padding-top: 8rem !important; }
@@ -28,6 +28,9 @@
 
 .u-padding-bottom-big {
   padding-bottom: 8rem !important; }
+
+.u-padding-bottom-medium {
+  padding-bottom: 6rem !important; }
 
 @keyframes moveInTop {
   0% {
@@ -183,13 +186,13 @@
         border-bottom: 1px solid #bebebe; }
 
 .gallery {
-  height: 95vh;
+  height: 65vh;
   background-image: linear-gradient(to right bottom, rgba(252, 144, 125, 0.6), rgba(207, 55, 28, 0.6)), url(../../img/plant.jpg);
   background-size: cover;
   background-position: top;
   position: relative;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 50vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 50vh, 0 100%); }
   .gallery__img {
     width: 50%;
     height: auto;
@@ -281,3 +284,17 @@ main {
   background-color: #ccdac2;
   margin-top: -20vh;
   padding: 10rem; }
+
+.card-body ul {
+  margin: 0 auto; }
+  .card-body ul li {
+    text-align: left;
+    padding: 3px; }
+    .card-body ul li:not(:last-child) {
+      border-bottom: 1px solid #bebebe; }
+
+.card-body__ex {
+  color: #fc907d;
+  font-size: 1.2rem;
+  font-family: 'Oswald', sans-serif;
+  text-align: center; }
