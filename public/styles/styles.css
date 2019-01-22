@@ -1,3 +1,31 @@
+.u-center-text {
+  text-align: center !important;
+  padding: 5px; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem !important; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important; }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem !important; }
+
+.u-margin-top-big {
+  margin-top: 8rem !important; }
+
+.u-margin-top-small {
+  margin-top: 4rem !important; }
+
+.u-padding-top-big {
+  padding-top: 8rem !important; }
+
+.u-padding-top-medium {
+  padding-top: 6rem !important; }
+
+.u-padding-top-small {
+  padding-top: 2rem !important; }
+
 @keyframes moveInTop {
   0% {
     opacity: 0;
@@ -48,12 +76,12 @@
   backface-visibility: hidden; }
   .heading-primary--main {
     display: block;
-    letter-spacing: 2rem;
     font-weight: 700;
     animation-name: moveInTop;
     animation-duration: 2s;
     animation-timing-function: ease-out;
-    text-shadow: 2px 2px 0 #bcbcbc, 4px 4px 0 #9c9c9c; }
+    text-shadow: 2px 2px 0 #bcbcbc, 4px 4px 0 #9c9c9c;
+    letter-spacing: 2rem; }
   .heading-primary--sub_1 {
     display: block;
     font-size: 5rem;
@@ -73,9 +101,9 @@
     text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0; }
 
 .heading-secondary {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 700;
   display: inline-block;
   background-image: linear-gradient(to right, #fc907d, #cf371c);
   -webkit-background-clip: text;
@@ -85,6 +113,43 @@
   .heading-secondary:hover {
     transform: skewX(2deg) skewX(15deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
+
+.heading-tertiary {
+  font-weight: 700;
+  text-transform: uppercase; }
+  .heading-tertiary__bestbuy {
+    color: rgba(11, 85, 196, 0.384); }
+  .heading-tertiary__ebay {
+    color: rgba(17, 169, 116, 0.301); }
+
+.card-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 3rem;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4); }
+  .card-box--product__bestbuy {
+    background-color: rgba(11, 85, 196, 0.384); }
+  .card-box--product__ebay {
+    background-color: rgba(17, 169, 116, 0.301); }
+  .card-box--sku {
+    color: #fc907d;
+    font-size: 5px; }
+  .card-box--price {
+    color: #cf371c; }
+
+.card__details {
+  padding: 2rem; }
+  .card__details ul {
+    list-style: none;
+    width: 80%;
+    margin: 0 auto; }
+    .card__details ul li {
+      text-align: center;
+      font-size: 1.4rem;
+      padding: 1rem; }
+      .card__details ul li:not(:last-child) {
+        border-bottom: 1px solid #bebebe; }
 
 .gallery {
   height: 95vh;
@@ -114,8 +179,7 @@
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
-  top: 50%;
-  left: 50%; }
+  margin-top: 17%; }
 
 .text {
   font-size: 6rem;
@@ -132,7 +196,7 @@
   height: 100%;
   width: 100%;
   z-index: -1;
-  opacity: .20;
+  opacity: .7;
   overflow: hidden; }
   .bg-video__content {
     height: 100%;
@@ -163,44 +227,30 @@
 .navigation__link:hover, .navigation__link:active {
   color: tomato; }
 
+main {
+  background-color: #ccdac2;
+  margin-top: -20vh;
+  padding: 10rem; }
+
 .container {
   max-width: 960px; }
 
+.form-control-lg {
+  width: 100%; }
+
+.form-style {
+  width: 65%; }
+
 .btn-outline-secondary {
-  color: white; }
+  color: white;
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1); }
 
-.u-center-text {
-  text-align: center !important;
-  padding: 5px; }
-
-.u-margin-bottom-small {
-  margin-bottom: 1.6rem !important; }
-
-.u-margin-bottom-medium {
-  margin-bottom: 4rem !important; }
-
-.u-margin-bottom-big {
-  margin-bottom: 8rem !important; }
-
-.u-margin-top-big {
-  margin-top: 8rem !important; }
-
-.u-padding-top-big {
-  padding-top: 8rem !important; }
-
-.search,
 .btn-small {
   color: #4e4e4e; }
 
-main {
-  background-color: #dee8d7;
-  margin-top: -20vh;
-  padding-left: 5rem;
-  padding-right: 5rem; }
+.btn--animated {
+  animation: roll-in-blurred-top 1s ease-out .75s;
+  animation-fill-mode: backwards; }
 
 .btn-style {
   text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1); }
-
-li{
-  list-style-type: none;
-}

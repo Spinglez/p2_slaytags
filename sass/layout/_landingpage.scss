@@ -4,8 +4,7 @@
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
-    top: 50%;
-    left: 50%;
+    margin-top: 17%;
 }
 
 .text {
@@ -25,7 +24,7 @@
     height: 100%;
     width: 100%;
     z-index: -1;
-    opacity: .20;
+    opacity: .7;
     overflow: hidden;
 
     &__content {

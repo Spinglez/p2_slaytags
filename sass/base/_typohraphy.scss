@@ -6,12 +6,13 @@
 
     &--main{
         display: block;
-        letter-spacing: 2rem;
         font-weight: 700;
         animation-name: moveInTop;
         animation-duration: 2s;
         animation-timing-function: ease-out; 
         text-shadow: 2px 2px 0 #bcbcbc, 4px 4px 0 #9c9c9c;
+        letter-spacing: 2rem;
+
     }
 
     &--sub_1{
@@ -37,9 +38,9 @@
 }
 
 .heading-secondary {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 700;
     display: inline-block;
     background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
     -webkit-background-clip: text;
@@ -51,4 +52,18 @@
         transform: skewX(2deg) skewX(15deg) scale(1.1);
         text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
     }
+}
+
+.heading-tertiary {
+    font-weight: 700;
+    text-transform: uppercase;
+
+    &__bestbuy{
+        color: $color-bestbuy;
+    }
+
+    &__ebay{
+        color: $color-ebay;
+    }
+
 }

@@ -30,13 +30,13 @@ function bestBuyQuery(userInput) {
   queryURL = 'https://api.bestbuy.com/v1/products(name=' + userInput + '*)?show=sku,name,salePrice,customerReviewAverage,customerReviewCount,image,url,&apiKey=' + keys.parsed.BESTBUY_KEY;
 
   axios.get(queryURL).then(res => {
-    if (parser.validate(res.data) === true) { 
+    if (parser.validate(res.data) === true) {
       var jsonObj = parser.parse(res.data, options);
     }
     var tObj = parser.getTraversalObj(res.data, options);
     var jsonObj = parser.convertToJson(tObj, options);
     for (i = 0; i < jsonObj.products.product.length; i++) {
-      
+
       db.Products.create({
         provider: "best_buy",
         name: jsonObj.products.product[i].name,
@@ -49,4 +49,4 @@ function bestBuyQuery(userInput) {
     }
   });
 }
-module.exports =  bestBuyQuery;
+module.exports = bestBuyQuery;

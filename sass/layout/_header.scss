@@ -1,4 +1,5 @@
 .gallery {
+    
     height: 95vh; 
     background-image: linear-gradient(
         to right bottom, 
@@ -22,6 +23,7 @@
     }
 
     &__text-box{
+        // Add Google Font for Tittle in header here
         position: absolute;
         top: 40%;
         left: 50%;
