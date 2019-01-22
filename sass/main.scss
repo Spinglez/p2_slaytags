@@ -11,25 +11,33 @@
 @import "layout/landingpage";
 @import "layout/navbar";
 
-
-.list-group-item {
-  line-height: 2.5;
+main {
+    background-color: rgb(204, 218, 194);
+    margin-top: -20vh;
+    padding: 10rem;
 }
 
 .container{
     max-width: 960px;
 }
 
+.form-control-lg {
+    width: 100%;
+}
+
+.form-style{
+    width: 65%;
+}
+
+
+// BUTTONs
 .btn-outline-secondary{
     color: $color-white;
+    text-shadow: $text-shadow;
 }
 
 .btn-small {
     color: $color-grey-dark;
-}
-
-.form-control-lg {
-    width: 150%;
 }
 
 .btn {
@@ -40,17 +48,7 @@
     }
 }
 
-main {
-    background-color: rgb(222, 232, 215);
-    margin-top: -20vh;
-    padding: 8rem;
-  
-}
-
 .btn-style{
     text-shadow: $text-shadow;
 }
 
-.form-style{
-    width: 65%;
-}

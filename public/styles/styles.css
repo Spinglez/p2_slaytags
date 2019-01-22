@@ -76,12 +76,12 @@
   backface-visibility: hidden; }
   .heading-primary--main {
     display: block;
-    letter-spacing: 2rem;
     font-weight: 700;
     animation-name: moveInTop;
     animation-duration: 2s;
     animation-timing-function: ease-out;
-    text-shadow: 2px 2px 0 #bcbcbc, 4px 4px 0 #9c9c9c; }
+    text-shadow: 2px 2px 0 #bcbcbc, 4px 4px 0 #9c9c9c;
+    letter-spacing: 2rem; }
   .heading-primary--sub_1 {
     display: block;
     font-size: 5rem;
@@ -227,32 +227,30 @@
 .navigation__link:hover, .navigation__link:active {
   color: tomato; }
 
-.list-group-item {
-  line-height: 2.5; }
+main {
+  background-color: #ccdac2;
+  margin-top: -20vh;
+  padding: 10rem; }
 
 .container {
   max-width: 960px; }
 
+.form-control-lg {
+  width: 100%; }
+
+.form-style {
+  width: 65%; }
+
 .btn-outline-secondary {
-  color: white; }
+  color: white;
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1); }
 
 .btn-small {
   color: #4e4e4e; }
-
-.form-control-lg {
-  width: 150%; }
 
 .btn--animated {
   animation: roll-in-blurred-top 1s ease-out .75s;
   animation-fill-mode: backwards; }
 
-main {
-  background-color: #dee8d7;
-  margin-top: -20vh;
-  padding: 8rem; }
-
 .btn-style {
   text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1); }
-
-.form-style {
-  width: 65%; }

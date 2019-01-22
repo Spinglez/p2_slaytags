@@ -6,12 +6,13 @@
 
     &--main{
         display: block;
-        letter-spacing: 2rem;
         font-weight: 700;
         animation-name: moveInTop;
         animation-duration: 2s;
         animation-timing-function: ease-out; 
         text-shadow: 2px 2px 0 #bcbcbc, 4px 4px 0 #9c9c9c;
+        letter-spacing: 2rem;
+
     }
 
     &--sub_1{

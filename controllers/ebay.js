@@ -17,7 +17,7 @@ function ebayQuery(userInput) {
         price: res.data.findItemsAdvancedResponse[0].searchResult[0].item[i].sellingStatus[0].currentPrice[0].__value__
       }).then(function (dbProducts) {
       });
-    };
+    }
   });
 
 }
