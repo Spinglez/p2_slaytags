@@ -11,11 +11,6 @@
 @import "layout/landingpage";
 @import "layout/navbar";
 
-main {
-    background-color: rgb(204, 218, 194);
-    margin-top: -20vh;
-    padding: 10rem;
-}
 
 .container{
     max-width: 960px;
@@ -28,7 +23,6 @@ main {
 .form-style{
     width: 65%;
 }
-
 
 // BUTTONs
 .btn-outline-secondary{
@@ -52,3 +46,8 @@ main {
     text-shadow: $text-shadow;
 }
 
+main {
+    background-color: rgb(204, 218, 194);
+    margin-top: -20vh;
+    padding: 10rem;
+}

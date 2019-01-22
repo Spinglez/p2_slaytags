@@ -35,20 +35,51 @@
     </nav>
     <!-- END NAVBAR -->
 </div>
-<table class="table table-borderless table-hover">
-    <thead>
-        <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Item</th>
-            <th scope="col">Date</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th scope="row">{{id}}</th>
-            <td>{{name}}</td>
-            <!-- whatever the name of the date searched variable is, if we have one.. -->
-            <td>{{date}}</td>
-        </tr>
-    </tbody>
-</table>
+
+
+<main>
+    <section class="section-result u-margin-bottom-small">
+        <div class="u-center-text u-padding-top-medium">
+            <h2 class="heading-secondary u-margin-bottom-medium">History</h2>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="table-style u-padding-bottom-big">
+                    <table class="table table-borderless table-hover table-striped table-dark">
+                        <thead>
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Date</th>
+                                <th scope="col">URL</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                {{!-- {{#each bbEntries}} --}}
+                                <th scope="row">{{this.id}}</th>
+                                <td>This is the name of BESTBUY's item{{this.name}}</td>
+                                <!-- whatever the name of the date searched variable is, if we have one.. -->
+                                <td>This is a search date (BESTBUY){{this.createdAt}}</td>
+                                <td>This is a URL (BESTBUY){{this.date}}</td>
+                                {{!-- {{/each}} --}}
+                            </tr>
+
+                            <tr>
+                                {{!-- {{#each ebEntries}} --}}
+                                <th scope="row">{{this.id}}</th>
+                                <td>This is the name of EBAY's item{{this.name}}</td>
+                                <!-- whatever the name of the date searched variable is, if we have one.. -->
+                                <td>This is a search date (EBAY){{this.createdAt}}</td>
+                                <td>This is a URL (EBAY){{this.date}}</td>
+                                {{!-- {{/each}} --}}
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</main>
