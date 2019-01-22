@@ -48,7 +48,7 @@ module.exports = function (app) {
 
   // Load history page
   app.get('/history', function (req, res) {
-    res.render('wishlist', {
+    res.render('history', {
       // add handlebars attributes here
     });
   });
