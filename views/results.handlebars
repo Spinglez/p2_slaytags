@@ -103,11 +103,13 @@
                             <li class="card-box card-box--product__bestbuy"><b><em>Product No.{{@key}}: </em></b>{{this.name}}</li>
                             <li class="card-box card-box--sku"><b>SKU #: </b>{{this.sku}} </li>
                             <li class="card-box card-box--price"><b>Price: $</b>{{this.price}}</li>
+                            <li class="card-box card-box--link"><a href={{this.url}} class="btn btn-info" role="button">Buy Now</a></li>
                             <br>
                             {{/each}}
                         </ul>
                     </div>
                 </div>
+                </a>
             </div>
 
             {{!-- EBAY column --}}
@@ -122,6 +124,7 @@
                             <li class="card-box card-box--product__ebay"><b><em>Product No.{{@key}}: </em></b>{{this.name}}</li>
                             <li class="card-box card-box--sku"><b>SKU #: </b>{{this.sku}} </li>
                             <li class="card-box card-box--price"><b>Price: $</b>{{this.price}}</li>
+                            <li class="card-box card-box--link"><a href={{this.url}} class="btn btn-info" role="button">Buy Now</a></li>
                             <br>
                             {{/each}}
                         </ul>
