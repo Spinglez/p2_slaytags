@@ -27,7 +27,7 @@ let keys = dotenv.config();
 
 function bestBuyQuery(userInput) {
 
-  queryURL = 'https://api.bestbuy.com/v1/products(name=' + userInput + '*)?show=sku,name,salePrice,customerReviewAverage,customerReviewCount,image,&apiKey=' + keys.parsed.BESTBUY_KEY;
+  queryURL = 'https://api.bestbuy.com/v1/products(name=' + userInput + '*)?show=sku,name,salePrice,customerReviewAverage,customerReviewCount,image,url,&apiKey=' + keys.parsed.BESTBUY_KEY;
 
   axios.get(queryURL).then(res => {
     if (parser.validate(res.data) === true) { 
@@ -40,6 +40,7 @@ function bestBuyQuery(userInput) {
       db.Products.create({
         provider: "best_buy",
         name: jsonObj.products.product[i].name,
+        url: jsonObj.products.product[i].url,
         sku: jsonObj.products.product[i].sku,
         price: jsonObj.products.product[i].salePrice
       }).then(function (dbProducts) {
@@ -47,6 +48,5 @@ function bestBuyQuery(userInput) {
       });
     }
   });
-
 }
 module.exports =  bestBuyQuery;
