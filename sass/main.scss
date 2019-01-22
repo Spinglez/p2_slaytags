@@ -1,49 +1,54 @@
 
+@import "abstracts/utilities";
 @import "abstracts/variables";
 
 @import "base/animation";
 @import "base/typohraphy";
 
+@import "components/card";
+
 @import "layout/header";
 @import "layout/landingpage";
 @import "layout/navbar";
 
-
-.list-group-item {
-  line-height: 2.5;
-
+main {
+    background-color: rgb(204, 218, 194);
+    margin-top: -20vh;
+    padding: 10rem;
+}
 
 .container{
     max-width: 960px;
 }
 
+.form-control-lg {
+    width: 100%;
+}
+
+.form-style{
+    width: 65%;
+}
+
+
+// BUTTONs
 .btn-outline-secondary{
     color: $color-white;
+    text-shadow: $text-shadow;
 }
 
-.u-center-text {
-    text-align: center !important;
-    padding: 5px;
-}
-.u-margin-bottom-small {margin-bottom: 1.6rem !important;}
-.u-margin-bottom-medium {margin-bottom: 4rem !important;}
-.u-margin-bottom-big {margin-bottom: 8rem !important;}
-.u-margin-top-big {margin-top: 8rem !important;}
-.u-padding-top-big {padding-top: 8rem !important;}
-
-
-.search,
 .btn-small {
     color: $color-grey-dark;
 }
 
-main {
-    background-color: rgb(222, 232, 215);
-    margin-top: -20vh;
-    padding-left: 5rem;
-    padding-right: 5rem;
+.btn {
+    
+    &--animated{
+        animation: roll-in-blurred-top 1s ease-out .75s;
+        animation-fill-mode: backwards;
+    }
 }
 
 .btn-style{
     text-shadow: $text-shadow;
 }
+
