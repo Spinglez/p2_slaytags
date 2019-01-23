@@ -3,7 +3,6 @@
     text-transform: uppercase;
     backface-visibility: hidden;
     
-
     &--main{
         font-family: 'Allerta Stencil', sans-serif;
         font-size: 2.5rem;
@@ -14,7 +13,7 @@
         animation-timing-function: ease-out; 
         text-shadow: 2px 2px 0 #bcbcbc, 4px 4px 0 #9c9c9c;
         letter-spacing: 2rem;
-
+        text-align: center;
     }
 
     &--sub_1{
@@ -40,7 +39,7 @@
 }
 
 .heading-secondary {
-    font-size: 3.1rem;
+    font-size: 3rem;
     text-transform: uppercase;
     font-weight: 700;
     display: inline-block;

@@ -64,3 +64,38 @@
       opacity: 1;
     }
   }
+
+  
+  @keyframes swing
+  {
+      15%
+      {
+          -webkit-transform: translateX(7px);
+          transform: translateX(7px);
+      }
+      30%
+      {
+          -webkit-transform: translateX(-7px);
+          transform: translateX(-7px);
+      }
+      50%
+      {
+          -webkit-transform: translateX(5px);
+          transform: translateX(5px);
+      }
+      65%
+      {
+          -webkit-transform: translateX(-5px);
+          transform: translateX(-5px);
+      }
+      80%
+      {
+          -webkit-transform: translateX(4px);
+          transform: translateX(4px);
+      }
+      100%
+      {
+          -webkit-transform: translateX(0);
+          transform: translateX(0);
+      }
+  }
