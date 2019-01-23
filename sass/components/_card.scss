@@ -1,3 +1,4 @@
+// CARD FOR RESULTS PAGE
 .card-box{
     font-family: 'Oswald', sans-serif;
     font-size: 1.7rem;
@@ -37,7 +38,7 @@
     }
 
     &--link{
-        
+        // Animation for btn link here
     }
 }
 
@@ -57,5 +58,30 @@
                 border-bottom: 1px solid $color-grey-light;
             }
         }
+    }
+}
+
+// HOW-TO-USE CARD
+.card-body{
+    background-color: rgba($color-white, .8);
+    box-shadow: 0 1.5rem 4rem $color-black-shadow-4;
+    ul{
+        margin: 0 auto;
+        list-style: none;
+        
+        li{
+            text-align: left;
+            padding: 3px;
+            &:not(:last-child){
+                border-bottom: 1px solid $color-grey-light;
+            }
+        }
+    }
+
+    &__ex{
+        color: $color-primary-light;
+        font-size: 1.2rem;
+        font-family: 'Oswald', sans-serif;
+        text-align: center;
     }
 }

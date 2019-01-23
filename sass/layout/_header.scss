@@ -1,15 +1,14 @@
 .gallery {
-    height: 65vh; 
+    height: 72vh; 
     background-image: linear-gradient(
         to right bottom, 
         rgba($color-primary-light, 0.6), 
-        rgba($color-primary-dark, 0.6)), 
-    url(../../img/plant.jpg);
+        rgba($color-primary-dark, 0.6));
     background-size: cover;
     background-position: top;
     position: relative;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 50vh, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 50vh, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 52vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 52vh, 0 100%);
 
     &__img{
         width: 50%;

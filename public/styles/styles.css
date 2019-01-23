@@ -185,14 +185,31 @@
       .card__details ul li:not(:last-child) {
         border-bottom: 1px solid #bebebe; }
 
+.card-body {
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4); }
+  .card-body ul {
+    margin: 0 auto;
+    list-style: none; }
+    .card-body ul li {
+      text-align: left;
+      padding: 3px; }
+      .card-body ul li:not(:last-child) {
+        border-bottom: 1px solid #bebebe; }
+  .card-body__ex {
+    color: #fc907d;
+    font-size: 1.2rem;
+    font-family: 'Oswald', sans-serif;
+    text-align: center; }
+
 .gallery {
-  height: 65vh;
-  background-image: linear-gradient(to right bottom, rgba(252, 144, 125, 0.6), rgba(207, 55, 28, 0.6)), url(../../img/plant.jpg);
+  height: 72vh;
+  background-image: linear-gradient(to right bottom, rgba(252, 144, 125, 0.6), rgba(207, 55, 28, 0.6));
   background-size: cover;
   background-position: top;
   position: relative;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 50vh, 0 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 50vh, 0 100%); }
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 52vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 52vh, 0 100%); }
   .gallery__img {
     width: 50%;
     height: auto;
@@ -284,17 +301,3 @@ main {
   background-color: #ccdac2;
   margin-top: -20vh;
   padding: 10rem; }
-
-.card-body ul {
-  margin: 0 auto; }
-  .card-body ul li {
-    text-align: left;
-    padding: 3px; }
-    .card-body ul li:not(:last-child) {
-      border-bottom: 1px solid #bebebe; }
-
-.card-body__ex {
-  color: #fc907d;
-  font-size: 1.2rem;
-  font-family: 'Oswald', sans-serif;
-  text-align: center; }
