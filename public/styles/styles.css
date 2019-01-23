@@ -148,13 +148,9 @@
     transform: skewX(2deg) skewX(15deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
 
-.heading-tertiary {
-  font-weight: 700;
-  text-transform: uppercase; }
-  .heading-tertiary__bestbuy {
-    color: rgba(11, 85, 196, 0.384); }
-  .heading-tertiary__ebay {
-    color: rgba(17, 169, 116, 0.301); }
+.heading-tertiary__img {
+  -webkit-filter: drop-shadow(3px 3px 3px #000);
+  filter: drop-shadow(3px 3px 3px #000); }
 
 .btn-outline-secondary {
   color: white;
@@ -254,8 +250,9 @@
   font-family: 'Federo', sans-serif;
   text-transform: uppercase;
   position: absolute;
-  top: 53%;
-  background-color: rgba(252, 144, 125, 0.6); }
+  top: 55%;
+  background-color: rgba(252, 144, 125, 0.6);
+  text-shadow: 1px 2px 4px #000; }
 
 .card__link {
   color: #000;
