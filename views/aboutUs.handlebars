@@ -1,0 +1,146 @@
+{{!-- NAVBAR --}}
+<div class="navigation fixed-top">
+    <nav class="navbar navbar-expand-lg navigation__nav" id="navbar">
+        <div class="container-fluid">
+
+            <a class="navbar-brand navigation__logo" href="#"><img src="../img/Logo_Slaytag.png" style="width: 45px; height: 45px;"
+                    alt="logo" id="logo"></a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse navigation__collapse" id="navbarNav">
+                <ul class="navbar-nav navigation__list">
+                    <li class="nav-item active navigation__item">
+                        <a class="nav-link navigation__link" href="#">About us<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navigation__link" href="/wishlist"><i class="fas fa-heart"></i>list</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navigation__link" href="/history">History</a>
+                    </li>
+                </ul>
+            </div>
+
+            <form class="form-inline my-2 my-lg-0" action="/app" method="get">
+                <button id="home" class="btn btn-sm btn-outline-secondary btn--home" title="Back to HOME page" type="submit"><i
+                        class="fas fa-home"></i></button>
+            </form>
+            <form class="form-inline">
+                <a>
+                    <button class="btn btn-sm btn-outline-secondary" id="qsLogoutBtn" type="button">Log Out</button>
+                </a>
+            </form>
+
+        </div>
+        <!--End container-fluid-->
+    </nav>
+    <!-- END NAVBAR -->
+</div>
+
+{{!-- THIS IS ABOUT US PAGE --}}
+<main>
+    <section class="section-result u-margin-bottom-small">
+        <div class="u-center-text u-padding-top-medium">
+            <h2 class="heading-secondary u-margin-bottom-medium">ABOUT US</h2>
+        </div>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-sm">
+                    <div class="card" style="width: 18rem;">
+                        <img src="../img/MattWong.png" class="card-img-top card__picture" alt="Matt Wong">
+                        <h3 class="card-title card__heading u-center-text ">Matt Wong</h3>
+                        <div class="card-body">
+                            <h6 class="card-text"><strong>RESPONSIBILITIES:</strong>
+                                <span class="card__span">User Authentication and APIs</span></h6>
+                            <a href="https://www.linkedin.com/in/mattthewong/" class="card__link"><i class="fab fa-linkedin fa-2x"></i></a>
+                            <a href="https://github.com/mattthewong" class="card__link"><i class="fab fa-github-square fa-2x"></i></a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm">
+                    <div class="card" style="width: 18rem;">
+                        <img src="../img/TamTran-cut.jpg" class="card-img-top card__picture" alt="Tam Tran">
+                        <h3 class="card-title card__heading u-center-text ">Tam Tran</h3>
+                        <div class="card-body">
+                            <h6 class="card-text"><strong>RESPONSIBILITIES:</strong>
+                                <span class="card__span">User Authentication and APIs</span></h6>
+                            <a href="#" class="card__link"><i class="fab fa-linkedin fa-2x"></i></a>
+                            <a href="#" class="card__link"><i class="fab fa-github-square fa-2x"></i></a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm">
+                    <div class="card" style="width: 18rem;">
+                        <img src="../img/MattWong.png" class="card-img-top card__picture" alt="Chritian Cabrera">
+                        <h3 class="card-title card__heading u-center-text ">Christian Cabrera</h3>
+                        <div class="card-body">
+                            <h6 class="card-text"><strong>RESPONSIBILITIES:</strong>
+                                <span class="card__span">User Authentication and APIs</span></h6>
+                            <a href="#" class="card__link"><i class="fab fa-linkedin fa-2x"></i></a>
+                            <a href="#" class="card__link"><i class="fab fa-github-square fa-2x"></i></a>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            {{!-- End first ROW --}}
+
+            <hr>
+            <div class="row">
+
+                <div class="col-sm">
+                    <div class="card" style="width: 18rem;">
+                        <img src="../img/MattWong.png" class="card-img-top card__picture" alt="JHart">
+                        <h3 class="card-title card__heading u-center-text ">Johnathan Hart</h3>
+                        <div class="card-body">
+                            <h6 class="card-text"><strong>RESPONSIBILITIES:</strong>
+                                <span class="card__span">User Authentication and APIs</span></h6>
+                            <a href="#" class="card__link"><i class="fab fa-linkedin fa-2x"></i></a>
+                            <a href="#" class="card__link"><i class="fab fa-github-square fa-2x"></i></a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm">
+                    <div class="card" style="width: 18rem;">
+                        <img src="../img/MattWong.png" class="card-img-top card__picture" alt="Mouzima">
+                        <h3 class="card-title card__heading u-center-text ">Mouzima</h3>
+                        <div class="card-body u-text-center">
+                            <h6 class="card-text"><strong>RESPONSIBILITIES:</strong>
+                                <span class="card__span">User Authentication and APIs</span></h6>
+                            <a href="#" class="card__link"><i class="fab fa-linkedin fa-2x"></i></a>
+                            <a href="#" class="card__link"><i class="fab fa-github-square fa-2x"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</main>
+
+{{!-- FOOTER --}}
+<footer>
+    <div class="footer-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="copyright">
+                        <p>@Copyright By <span>SlayTags.2019</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
