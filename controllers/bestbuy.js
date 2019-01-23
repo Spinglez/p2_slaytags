@@ -5,18 +5,18 @@ var he = require('he');
 const db = require('../models');
 
 var options = {
-  attributeNamePrefix: "@_",
-  attrNodeName: "attr", //default is 'false'
-  textNodeName: "#text",
+  attributeNamePrefix: '@_',
+  attrNodeName: 'attr', //default is 'false'
+  textNodeName: '#text',
   ignoreAttributes: true,
   ignoreNameSpace: false,
   allowBooleanAttributes: false,
   parseNodeValue: true,
   parseAttributeValue: false,
   trimValues: true,
-  cdataTagName: "__cdata", //default is 'false'
-  cdataPositionChar: "\\c",
-  localeRange: "", //To support non english character in tag/attribute values.
+  cdataTagName: '__cdata', //default is 'false'
+  cdataPositionChar: '\\c',
+  localeRange: '', //To support non english character in tag/attribute values.
   parseTrueNumberOnly: false,
   attrValueProcessor: a => he.decode(a, { isAttributeValue: true }),//default is a=>a
   tagValueProcessor: a => he.decode(a) //default is a=>a
@@ -38,7 +38,7 @@ function bestBuyQuery(userInput) {
     for (i = 0; i < jsonObj.products.product.length; i++) {
 
       db.Products.create({
-        provider: "best_buy",
+        provider: 'best_buy',
         name: jsonObj.products.product[i].name,
         url: jsonObj.products.product[i].url,
         sku: jsonObj.products.product[i].sku,

@@ -1,7 +1,7 @@
 if (window.location.pathname === '/app') {
   setTimeout(function () {
 
-    if (typeof localStorage === "undefined" || localStorage === null) {
+    if (typeof localStorage === 'undefined' || localStorage === null) {
       var LocalStorage = require('node-localstorage').LocalStorage;
       localStorage = new LocalStorage('./scratch');
     }
@@ -9,17 +9,17 @@ if (window.location.pathname === '/app') {
       firstName: localStorage.getItem('firstName'),
       lastName: localStorage.getItem('lastName'),
       accessToken: localStorage.getItem('access_token')
-    }
-    $.post("/api/users", userData)
+    };
+    $.post('/api/users', userData)
       .then(function (result) {
-      })
+      });
   }, 5000);
 
 
-  const submitButton = document.getElementById("search");
+  const submitButton = document.getElementById('search');
 
   submitButton.addEventListener('click', function () {
-    const userInput = document.getElementById("search-item").value;
+    const userInput = document.getElementById('search-item').value;
 
     $.ajax({
       // request to direct to app
@@ -28,10 +28,8 @@ if (window.location.pathname === '/app') {
       data: { userInput: userInput }
     }).then(function (response, error) {
       if (error) {
-        console.log("error is:", error);
+        console.log('error is:', error);
       }
     });
-  })
+  });
 }
-
-

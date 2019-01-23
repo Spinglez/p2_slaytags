@@ -21,22 +21,21 @@ module.exports = function (app) {
     })
       .then(function (entries) {
         const bestBuyEntries = [];
-        const ebayEntries = []
+        const ebayEntries = [];
         for(i = 0; i < entries.length; i++){
           if(entries[i].provider === 'ebay'){
             ebayEntries.push(entries[i]);
-          }
-          else{
-            bestBuyEntries.push(entries[i])
+          } else{
+            bestBuyEntries.push(entries[i]);
           }
         }
         res.render('results',
-          { 
+          {
             bbEntries: bestBuyEntries,
             ebEntries: ebayEntries
-           }
-        )
-      })
+          }
+        );
+      });
   });
 
   // Load wishlist page
