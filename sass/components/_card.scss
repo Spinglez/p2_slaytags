@@ -78,6 +78,7 @@
 .card-body{
     background-color: rgba($color-white, .8);
     box-shadow: 0 1.5rem 4rem $color-black-shadow-4;
+
     ul{
         margin: 0 auto;
         list-style: none;
@@ -92,9 +93,16 @@
     }
 
     &__ex{
-        color: $color-primary-light;
-        font-size: 1.2rem;
+        color: $color-primary;
+        font-size: 1.3rem;
+        background-color: rgb(222, 232, 215);
+        border-radius: 4px;
         font-family: 'Oswald', sans-serif;
-        text-align: center;
+        
+        &:hover{
+            background-color: $color-black;
+            box-shadow: $text-shadow;
+            letter-spacing: 1px;
+        }
     }
 }
