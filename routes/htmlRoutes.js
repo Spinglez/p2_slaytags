@@ -52,6 +52,13 @@ module.exports = function (app) {
     });
   });
 
+    // Load history page
+    app.get('/about-us', function (req, res) {
+      res.render('aboutUs', {
+        // add handlebars attributes here
+      });
+    });
+
   // Render 404 page for any unmatched routes
   app.get('*', function (req, res) {
     res.render('404');
