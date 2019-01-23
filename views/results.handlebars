@@ -46,17 +46,18 @@
 
 {{!-- After User search - render Bestbuy and eBay items go HERE --}}
 <main>
-    {{!-- <div class="container-fuild"> --}}
-        <section class="section-result u-margin-bottom-medium">
-            <div class="u-center-text u-padding-top-medium">
-                <h2 class="heading-secondary u-margin-bottom-small">Results</h2>
-            </div>
+    <section class="section-result u-margin-bottom-medium">
+        <div class="u-center-text u-padding-top-medium">
+            <h2 class="heading-secondary u-margin-bottom-small">Results</h2>
+        </div>
+        <div class="container">
             <div class="row">
 
                 {{!-- BESTBUY column --}}
                 <div class="col-lg-6 col-md-5 col-sm-12">
                     <h3 class="heading-tertiary u-margin-bottom-small u-center-text">
-                        <img src="../img/bestBuy-logo.png" class="heading-tertiary__img" style="width: 101px; height: auto;" alt="BestBuy-logo">
+                        <img src="../img/bestBuy-logo.png" class="heading-tertiary__img" style="width: 101px; height: auto;"
+                            alt="BestBuy-logo">
                     </h3>
                     <div class="card__details">
                         <div class="list-item" id="bestBuy-item">
@@ -64,8 +65,8 @@
                                 {{#each bbEntries}}
                                 <li class="card-box card-box--product__bestbuy"><b>Product No.{{@key}}: </b>{{this.name}}</li>
                                 <li class="card-box card-box--sku"><b>SKU #: </b>{{this.sku}} </li>
-                                <li class="card-box card-box--price"><b>Price: $</b>{{this.price}} <span><img src="../img/bestBuy-logo.png" style="width: 28px; height: auto;"
-                                            alt="BestBuy-logo"></span></li>
+                                <li class="card-box card-box--price"><b>Price: $</b>{{this.price}} <span><img src="../img/bestBuy-logo.png"
+                                            style="width: 28px; height: auto;" alt="BestBuy-logo"></span></li>
                                 <li class="card-box card-box--item"><a href={{this.url}} class="btn btn-info card-box--link"
                                         role="button">Buy Now</a></li>
                                 <br>
@@ -80,7 +81,8 @@
                 {{!-- EBAY column --}}
                 <div class="col-lg-6 col-md-5 col-sm-12">
                     <h3 class="heading-tertiary u-margin-bottom-medium u-center-text">
-                        <img src="../img/eBay-logo.png" class="heading-tertiary__img" style="width: 148px; height: auto;" alt="eBay-logo">
+                        <img src="../img/eBay-logo.png" class="heading-tertiary__img" style="width: 148px; height: auto;"
+                            alt="eBay-logo">
                     </h3>
                     <div class="card__details">
                         <div class="list-item" id="eBay-item">
@@ -88,8 +90,8 @@
                                 {{#each ebEntries}}
                                 <li class="card-box card-box--product__ebay"><b>Product No.{{@key}}: </b>{{this.name}}</li>
                                 <li class="card-box card-box--sku"><b>SKU #: </b>{{this.sku}} </li>
-                                <li class="card-box card-box--price"><b>Price: $</b>{{this.price}} <span><img src="../img/eBay-logo.png" style="width: 39px; height: auto;"
-                                            alt="eBay-logo"></span></li>
+                                <li class="card-box card-box--price"><b>Price: $</b>{{this.price}} <span><img src="../img/eBay-logo.png"
+                                            style="width: 39px; height: auto;" alt="eBay-logo"></span></li>
                                 <li class="card-box card-box--item"><a href={{this.url}} class="btn btn-info card-box--link"
                                         role="button">Buy Now</a></li>
                                 <br>
@@ -102,8 +104,8 @@
 
             </div>
             {{!-- END ROW div --}}
-        </section>
-        {{!-- </div> --}}
+    </section>
+    </div>
 </main>
 
 {{!-- FOOTER --}}
