@@ -148,13 +148,9 @@
     transform: skewX(2deg) skewX(15deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
 
-.heading-tertiary {
-  font-weight: 700;
-  text-transform: uppercase; }
-  .heading-tertiary__bestbuy {
-    color: rgba(11, 85, 196, 0.384); }
-  .heading-tertiary__ebay {
-    color: rgba(17, 169, 116, 0.301); }
+.heading-tertiary__img {
+  -webkit-filter: drop-shadow(3px 3px 3px #000);
+  filter: drop-shadow(3px 3px 3px #000); }
 
 .btn-outline-secondary {
   color: white;
@@ -177,7 +173,7 @@
   font-family: 'Oswald', sans-serif;
   font-size: 1.7rem;
   background-color: rgba(255, 255, 255, 0.8);
-  padding: 3rem;
+  padding: 2rem;
   text-align: center;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4); }
@@ -254,8 +250,9 @@
   font-family: 'Federo', sans-serif;
   text-transform: uppercase;
   position: absolute;
-  top: 53%;
-  background-color: rgba(252, 144, 125, 0.6); }
+  top: 55%;
+  background-color: rgba(252, 144, 125, 0.6);
+  text-shadow: 1px 2px 4px #000; }
 
 .card__link {
   color: #000;
@@ -358,8 +355,9 @@
 .navigation__link:hover, .navigation__link:active {
   color: tomato; }
 
-.container {
-  max-width: 960px; }
+.navigation__logo {
+  -webkit-filter: drop-shadow(3px 3px 3px #4e4e4e);
+  filter: drop-shadow(3px 3px 3px #4e4e4e); }
 
 .form-control-lg {
   width: 100%; }

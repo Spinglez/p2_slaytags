@@ -17,4 +17,9 @@
         }
     }   
 
+    &__logo{
+        -webkit-filter: drop-shadow(3px 3px 3px $color-grey-dark);
+        filter: drop-shadow(3px 3px 3px $color-grey-dark);
+    }
+
 }

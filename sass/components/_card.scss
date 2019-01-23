@@ -3,7 +3,7 @@
     font-family: 'Oswald', sans-serif;
     font-size: 1.7rem;
     background-color: rgba($color-white, .8);
-    padding: 3rem;
+    padding: 2rem;
     text-align: center;
     border-radius: 3px;
     box-shadow: 0 1.5rem 4rem $color-black-shadow-4;
@@ -122,9 +122,11 @@
        font-family: 'Federo', sans-serif;
        text-transform: uppercase;
        position: absolute;
-       top: 53%;
-       background-color: rgba($color-primary-light,.6)
+       top: 55%;
+       background-color: rgba($color-primary-light,.6);
+       text-shadow: 1px 2px 4px $color-black;
     }
+
     &__link{
         color: $color-black;
         transition: all .2s;
