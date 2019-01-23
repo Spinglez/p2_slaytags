@@ -32,3 +32,31 @@ main {
     padding: 10rem;
 }
 
+/* FOOTER */
+.footer-area{
+    padding: .8rem 0px;
+    position: relative;
+}
+
+.copyright {
+    text-align: center;
+}
+
+.copyright p{
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 0;
+    color: $color-grey-dark;
+}
+
+.ft-logo a img{
+    max-width: 5rem;
+}
+
+.copyright p span{
+    display: inline-block;
+    color: $color-primary;
+    font-weight: 400;
+    text-shadow: $text-shadow;
+    text-transform: uppercase;
+ }
