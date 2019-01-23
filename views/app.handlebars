@@ -16,7 +16,7 @@
             <div class="collapse navbar-collapse navigation__collapse" id="navbarNav">
                 <ul class="navbar-nav navigation__list">
                     <li class="nav-item active navigation__item">
-                        <a class="nav-link navigation__link" href="#">About us<span class="sr-only">(current)</span></a>
+                        <a class="nav-link navigation__link" href="/aboutus">About us<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link navigation__link" href="/wishlist"><i class="fas fa-heart"></i>list</a>
@@ -105,21 +105,22 @@
                             <li>The products searched must be within the scope of the electronics category or you may
                                 get few or no results.</li>
                             <li>The more specific of a keyword you enter, the fewer results but higher accuracy of
-                                comparisons you get </li>
-                            <span class="card-body__ex">Ex: (2019 iPhone XR New vs. iPhone)</span>
+                                comparisons you get. </li>
+                            <span class="card-body__ex">Example: (iPhone 6s plus 32GB or laptop Dell xps 13, etc...)</span>
                         </ul>
                     </div>
                 </div>
 
             </div>
             {{!-- Search box --}}
-            <div class="search ">
+            <div class="search">
                 <form class="form-inline my-2 my-lg-0" action="/results" method="get">
                     <input class="form-control form-control-lg mr-sm-2 " id="search-item" type="search" style="width: 90.5%;"
-                        placeholder="Search your favorite electronics or related tech products" aria-label="Search">
+                        placeholder="Search your favorite electronics devices... (Ex: Canon DSLR camera, Galaxy note 9, etc...)" aria-label="Search">
                     <button id="search" class="btn btn-dark my-2 my-sm-0" type="submit">Search</button>
                 </form>
             </div>
+
         </div>
     </section>
 </main>

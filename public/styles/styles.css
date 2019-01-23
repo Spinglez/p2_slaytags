@@ -232,10 +232,45 @@
       .card-body ul li:not(:last-child) {
         border-bottom: 1px solid #bebebe; }
   .card-body__ex {
+    color: tomato;
+    font-size: 1.3rem;
+    background-color: #dee8d7;
+    border-radius: 4px;
+    font-family: 'Oswald', sans-serif; }
+    .card-body__ex:hover {
+      background-color: #000;
+      box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+      letter-spacing: 1px; }
+
+.card__picture {
+  position: relative;
+  width: 286px;
+  height: 266px; }
+
+.card__heading {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: bold;
+  font-family: 'Federo', sans-serif;
+  text-transform: uppercase;
+  position: absolute;
+  top: 53%;
+  background-color: rgba(252, 144, 125, 0.6); }
+
+.card__link {
+  color: #000;
+  transition: all .2s; }
+  .card__link:hover {
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
     color: #fc907d;
-    font-size: 1.2rem;
-    font-family: 'Oswald', sans-serif;
-    text-align: center; }
+    padding: 3px;
+    background-color: #000; }
+
+.card__span {
+  color: #cf371c;
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: 'Marcellus', serif; }
 
 .gallery {
   height: 70vh;

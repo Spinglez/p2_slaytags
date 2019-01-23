@@ -78,6 +78,7 @@
 .card-body{
     background-color: rgba($color-white, .8);
     box-shadow: 0 1.5rem 4rem $color-black-shadow-4;
+
     ul{
         margin: 0 auto;
         list-style: none;
@@ -92,9 +93,54 @@
     }
 
     &__ex{
-        color: $color-primary-light;
-        font-size: 1.2rem;
+        color: $color-primary;
+        font-size: 1.3rem;
+        background-color: rgb(222, 232, 215);
+        border-radius: 4px;
         font-family: 'Oswald', sans-serif;
-        text-align: center;
+        
+        &:hover{
+            background-color: $color-black;
+            box-shadow: $text-shadow;
+            letter-spacing: 1px;
+        }
+    }
+}
+
+.card {
+    
+    &__picture{
+        position: relative;
+        width: 286px;
+        height: 266px;
+    }
+
+    &__heading{
+       color: $color-white;
+       font-size: 1.3rem;
+       font-weight: bold;
+       font-family: 'Federo', sans-serif;
+       text-transform: uppercase;
+       position: absolute;
+       top: 53%;
+       background-color: rgba($color-primary-light,.6)
+    }
+    &__link{
+        color: $color-black;
+        transition: all .2s;
+
+        &:hover{
+            box-shadow: 0 1.5rem 4rem $color-black-shadow-4;
+            color: $color-primary-light;
+            padding: 3px;
+            background-color: $color-black;
+        }
+    }
+
+    &__span{
+        color: $color-primary-dark;
+        font-size: 1.1rem;
+        font-weight: 600;
+        font-family: 'Marcellus', serif;
     }
 }

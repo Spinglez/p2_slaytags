@@ -49,8 +49,7 @@
     letter-spacing: 8px;
     transition-property: all 2s;
     font-family: 'Bangers', cursive;
-    // font-family: 'Kaushan Script', cursive;
-
+   
     &:hover {
         transform: skewX(2deg) skewX(15deg) scale(1.1);
         text-shadow: .5rem 1rem 2rem rgba($color-black, .2);

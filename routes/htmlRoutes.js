@@ -22,10 +22,10 @@ module.exports = function (app) {
       .then(function (entries) {
         const bestBuyEntries = [];
         const ebayEntries = [];
-        for(i = 0; i < entries.length; i++){
-          if(entries[i].provider === 'ebay'){
+        for (i = 0; i < entries.length; i++) {
+          if (entries[i].provider === 'ebay') {
             ebayEntries.push(entries[i]);
-          } else{
+          } else {
             bestBuyEntries.push(entries[i]);
           }
         }
@@ -51,7 +51,6 @@ module.exports = function (app) {
       // add handlebars attributes here
     });
   });
-
 
   // Render 404 page for any unmatched routes
   app.get('*', function (req, res) {
