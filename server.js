@@ -49,7 +49,5 @@ db.sequelize.sync(syncOptions).then(function() {
   });
 });
 
-console.log(keys.parsed.BESTBUY_KEY);
-
 module.exports = app;
 module.exports = keys;
