@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "rootpw",
+    "password": "ocwio5Ap",
     "database": "slaydb",
     "host": "localhost",
     "dialect": "mysql"
@@ -15,7 +15,7 @@
     "logging": false
   },
   "production": {
-    "use_env_variable": "SLAYDB_URL",
+    "use_env_variable": "JAWSDB_URL",
     "dialect": "mysql"
   }
 }

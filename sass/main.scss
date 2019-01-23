@@ -5,17 +5,13 @@
 @import "base/animation";
 @import "base/typohraphy";
 
+@import "components/button";
 @import "components/card";
 
 @import "layout/header";
 @import "layout/landingpage";
 @import "layout/navbar";
 
-main {
-    background-color: rgb(204, 218, 194);
-    margin-top: -20vh;
-    padding: 10rem;
-}
 
 .container{
     max-width: 960px;
@@ -30,25 +26,37 @@ main {
 }
 
 
-// BUTTONs
-.btn-outline-secondary{
-    color: $color-white;
-    text-shadow: $text-shadow;
+main {
+    background-color: rgb(204, 218, 194);
+    margin-top: -20vh;
+    padding: 7rem;
 }
 
-.btn-small {
+/* FOOTER */
+.footer-area{
+    padding: .6rem 0px;
+    position: relative;
+}
+
+.copyright {
+    text-align: center;
+}
+
+.copyright p{
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 0;
     color: $color-grey-dark;
 }
 
-.btn {
-    
-    &--animated{
-        animation: roll-in-blurred-top 1s ease-out .75s;
-        animation-fill-mode: backwards;
-    }
+.ft-logo a img{
+    max-width: 5rem;
 }
 
-.btn-style{
+.copyright p span{
+    display: inline-block;
+    color: $color-primary;
+    font-weight: 400;
     text-shadow: $text-shadow;
-}
-
+    text-transform: uppercase;
+ }

@@ -19,10 +19,10 @@
                         <a class="nav-link navigation__link" href="#">About us<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link navigation__link" href="#"><i class="fas fa-heart"></i>list</a>
+                        <a class="nav-link navigation__link" href="/wishlist"><i class="fas fa-heart"></i>list</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link navigation__link" href="#">History</a>
+                        <a class="nav-link navigation__link" href="/history">History</a>
                     </li>
                 </ul>
             </div>
@@ -46,25 +46,22 @@
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="../img/work.jpg" class="d-block  mx-auto" alt="work">
+                    <img src="../img/work.jpg" style="width: 800px;" class="d-block  mx-auto" alt="work">
                 </div>
                 <div class="carousel-item">
-                    <img src="../img/desk.jpg" class="d-block  mx-auto" alt="desk">
+                    <img src="../img/oldmachine.jpg" style="width: 1000px;" class="d-block  mx-auto" alt="old machine">
                 </div>
                 <div class="carousel-item">
-                    <img src="../img/oldmachine.jpg" class="d-block  mx-auto" alt="old machine">
+                    <img src="../img/phone.jpg" style="width: 1000px;" class="d-block  mx-auto" alt="phone">
                 </div>
                 <div class="carousel-item">
-                    <img src="../img/phone.jpg" class="d-block  mx-auto" alt="phone">
+                    <img src="../img/laptop.jpg" style="width: 1000px;" class="d-block  mx-auto" alt="laptop">
                 </div>
                 <div class="carousel-item">
-                    <img src="../img/laptop.jpg" class="d-block  mx-auto" alt="laptop">
+                    <img src="../img/laptop2.jpg" style="width: 1000px;" class="d-block  mx-auto" alt="laptop2">
                 </div>
                 <div class="carousel-item">
-                    <img src="../img/laptop2.jpg" class="d-block  mx-auto" alt="laptop2">
-                </div>
-                <div class="carousel-item">
-                    <img src="../img/konika.jpg" class="d-block  mx-auto" alt="konika">
+                    <img src="../img/konika.jpg" style="width: 1000px;" class="d-block  mx-auto" alt="konika">
                 </div>
             </div>
         </div>
@@ -83,8 +80,8 @@
 {{!-- How to use box --}}
 <main>
     <section class="section-introduce u-margin-bottom-medium">
-        <div class="container">
-            <div class="u-center-text u-padding-top-medium">
+        <div class="container u-padding-bottom-small">
+            <div class="u-center-text">
 
                 <h2 class="heading-secondary">Let's get started</h2>
                 <br>
@@ -96,36 +93,48 @@
                 {{!-- Collapse Instruction --}}
                 <div class="collapse u-margin-bottom-small" id="collapseExample">
                     <div class="card card-body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
-                        squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente
-                        ea proident.
+                        <ul>
+                            <li>Please enter the product you're searching for in the field below.</li>
+                            <li>The more specific of a keyword you enter, the fewer results there will be.</li>
+                            <li>We compare prices between <span><img src="../img/bestBuy-logo.png" style="width: 28px; height: auto;"
+                                        alt="BestBuy-logo"></span> and <span><img src="../img/eBay-logo.png" style="width: 39px; height: auto;"
+                                        alt="eBay-logo">
+                                </span> so
+                                that you can negotiate prices in-store
+                                or online.</li>
+                            <li>The products searched must be within the scope of the electronics category or you may
+                                get few or no results.</li>
+                            <li>The more specific of a keyword you enter, the fewer results but higher accuracy of
+                                comparisons you get </li>
+                            <span class="card-body__ex">Ex: (2019 iPhone XR New vs. iPhone)</span>
+                        </ul>
                     </div>
                 </div>
 
             </div>
-
             {{!-- Search box --}}
-
-            {{!-- <div class="search"> --}}
+            <div class="search ">
                 <form class="form-inline my-2 my-lg-0" action="/results" method="get">
-                    <input class="form-control mr-sm-2" id="search-item" type="search" style="width: 88%;" placeholder="Search your favorite electronics or related tech products" aria-label="Search">
+                    <input class="form-control form-control-lg mr-sm-2 " id="search-item" type="search" style="width: 90.5%;"
+                        placeholder="Search your favorite electronics or related tech products" aria-label="Search">
                     <button id="search" class="btn btn-dark my-2 my-sm-0" type="submit">Search</button>
                 </form>
-            {{!-- </div> --}}
-
-            {{!-- <form class="form-inline my-2 my-lg-0" action="/results" method="get">
-                <div class="search">
-                    <div>
-                        <input class="form-control form-control-lg mr-sm-2" id="search-item" type="search" placeholder="Search your favorite electronics or related tech products"
-                            aria-label="Search">
-                    </div>
-                    <button id="search" class="btn btn-dark mx-auto" type="submit">Search</button>
-                </div>
-            </form> --}}
-
+            </div>
         </div>
     </section>
 </main>
 
-{{!--
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> --}}
+{{!-- FOOTER --}}
+<footer>
+    <div class="footer-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="copyright">
+                        <p>@Copyright By <span>SlayTags.2019</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
