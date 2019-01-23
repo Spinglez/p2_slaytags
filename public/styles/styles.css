@@ -2,6 +2,10 @@
   text-align: center !important;
   padding: 5px; }
 
+.u-right-text {
+  text-align: right;
+  padding: 5px; }
+
 .u-margin-bottom-small {
   margin-bottom: 1.5rem !important; }
 
@@ -15,7 +19,7 @@
   margin-top: 8rem !important; }
 
 .u-margin-top-small {
-  margin-top: 4rem !important; }
+  margin-top: 2rem !important; }
 
 .u-padding-top-big {
   padding-top: 8rem !important; }
@@ -25,6 +29,12 @@
 
 .u-padding-top-small {
   padding-top: 2rem !important; }
+
+.u-padding-bottom-big {
+  padding-bottom: 8rem !important; }
+
+.u-padding-bottom-medium {
+  padding-bottom: 6rem !important; }
 
 @keyframes moveInTop {
   0% {
@@ -70,18 +80,41 @@
     filter: blur(0);
     opacity: 1; } }
 
+@keyframes swing {
+  15% {
+    -webkit-transform: translateX(7px);
+    transform: translateX(7px); }
+  30% {
+    -webkit-transform: translateX(-7px);
+    transform: translateX(-7px); }
+  50% {
+    -webkit-transform: translateX(5px);
+    transform: translateX(5px); }
+  65% {
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px); }
+  80% {
+    -webkit-transform: translateX(4px);
+    transform: translateX(4px); }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0); } }
+
 .heading-primary {
   color: white;
   text-transform: uppercase;
   backface-visibility: hidden; }
   .heading-primary--main {
+    font-family: 'Allerta Stencil', sans-serif;
+    font-size: 2.5rem;
     display: block;
-    font-weight: 700;
+    font-weight: 300;
     animation-name: moveInTop;
     animation-duration: 2s;
     animation-timing-function: ease-out;
     text-shadow: 2px 2px 0 #bcbcbc, 4px 4px 0 #9c9c9c;
-    letter-spacing: 2rem; }
+    letter-spacing: 2rem;
+    text-align: center; }
   .heading-primary--sub_1 {
     display: block;
     font-size: 5rem;
@@ -101,15 +134,16 @@
     text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0; }
 
 .heading-secondary {
-  font-size: 2.8rem;
+  font-size: 3rem;
   text-transform: uppercase;
   font-weight: 700;
   display: inline-block;
   background-image: linear-gradient(to right, #fc907d, #cf371c);
   -webkit-background-clip: text;
   color: transparent;
-  letter-spacing: 2px;
-  transition-property: all 2s; }
+  letter-spacing: 8px;
+  transition-property: all 2s;
+  font-family: 'Bangers', cursive; }
   .heading-secondary:hover {
     transform: skewX(2deg) skewX(15deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
@@ -122,21 +156,57 @@
   .heading-tertiary__ebay {
     color: rgba(17, 169, 116, 0.301); }
 
+.btn-outline-secondary {
+  color: white;
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1); }
+
+.btn-small {
+  color: #4e4e4e; }
+
+.btn--animated {
+  animation: roll-in-blurred-top 1s ease-out .75s;
+  animation-fill-mode: backwards; }
+
+.btn:hover {
+  color: #fc907d; }
+
+.btn-style {
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1); }
+
 .card-box {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.7rem;
   background-color: rgba(255, 255, 255, 0.8);
   padding: 3rem;
   text-align: center;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4); }
   .card-box--product__bestbuy {
-    background-color: rgba(11, 85, 196, 0.384); }
+    background-color: rgba(11, 85, 196, 0.384);
+    height: 180px; }
   .card-box--product__ebay {
-    background-color: rgba(17, 169, 116, 0.301); }
+    background-color: rgba(17, 169, 116, 0.301);
+    height: 180px; }
   .card-box--sku {
     color: #fc907d;
-    font-size: 5px; }
+    font-size: 1.7rem !important;
+    letter-spacing: 5px;
+    font-family: 'Pathway Gothic One', sans-serif; }
   .card-box--price {
-    color: #cf371c; }
+    color: #cf371c;
+    font-size: 2rem !important;
+    letter-spacing: 2px;
+    font-family: 'Teko', sans-serif; }
+  .card-box--link:link, .card-box--link:visited {
+    text-decoration: none;
+    display: inline-block; }
+  .card-box--link:hover, .card-box--link:active {
+    -webkit-animation: swing 1s ease;
+    animation: swing 1s ease;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    color: #fc907d;
+    box-shadow: 0 1rem 2rem rgba(190, 190, 190, 0.2); }
 
 .card__details {
   padding: 2rem; }
@@ -146,30 +216,46 @@
     margin: 0 auto; }
     .card__details ul li {
       text-align: center;
-      font-size: 1.4rem;
       padding: 1rem; }
       .card__details ul li:not(:last-child) {
         border-bottom: 1px solid #bebebe; }
 
+.card-body {
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4); }
+  .card-body ul {
+    margin: 0 auto;
+    list-style: none; }
+    .card-body ul li {
+      text-align: left;
+      padding: 3px; }
+      .card-body ul li:not(:last-child) {
+        border-bottom: 1px solid #bebebe; }
+  .card-body__ex {
+    color: #fc907d;
+    font-size: 1.2rem;
+    font-family: 'Oswald', sans-serif;
+    text-align: center; }
+
 .gallery {
-  height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(252, 144, 125, 0.6), rgba(207, 55, 28, 0.6)), url(../../img/plant.jpg);
+  height: 70vh;
+  background-image: linear-gradient(to right bottom, rgba(252, 144, 125, 0.6), rgba(207, 55, 28, 0.6));
   background-size: cover;
   background-position: top;
   position: relative;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 50vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 50vh, 0 100%); }
   .gallery__img {
-    width: 50%;
+    width: 38%;
     height: auto;
     position: absolute;
     left: 5%;
     backface-visibility: hidden;
-    -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%); }
+    -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 90%);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 90%); }
   .gallery__text-box {
     position: absolute;
-    top: 40%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%); }
 
@@ -179,12 +265,22 @@
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
-  margin-top: 17%; }
+  margin-top: 15%; }
 
 .text {
   font-size: 6rem;
   color: white;
-  font-weight: 700; }
+  font-weight: 700;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.5); }
+
+.lead {
+  font-family: 'Homenaje', sans-serif;
+  text-transform: capitalize;
+  font-size: 2rem;
+  letter-spacing: 1px; }
 
 .highlight {
   color: tomato; }
@@ -227,11 +323,6 @@
 .navigation__link:hover, .navigation__link:active {
   color: tomato; }
 
-main {
-  background-color: #ccdac2;
-  margin-top: -20vh;
-  padding: 10rem; }
-
 .container {
   max-width: 960px; }
 
@@ -241,16 +332,31 @@ main {
 .form-style {
   width: 65%; }
 
-.btn-outline-secondary {
-  color: white;
-  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1); }
+main {
+  background-color: #ccdac2;
+  margin-top: -20vh;
+  padding: 7rem; }
 
-.btn-small {
+/* FOOTER */
+.footer-area {
+  padding: .6rem 0px;
+  position: relative; }
+
+.copyright {
+  text-align: center; }
+
+.copyright p {
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 0;
   color: #4e4e4e; }
 
-.btn--animated {
-  animation: roll-in-blurred-top 1s ease-out .75s;
-  animation-fill-mode: backwards; }
+.ft-logo a img {
+  max-width: 5rem; }
 
-.btn-style {
-  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1); }
+.copyright p span {
+  display: inline-block;
+  color: tomato;
+  font-weight: 400;
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase; }

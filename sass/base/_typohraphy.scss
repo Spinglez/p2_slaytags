@@ -3,16 +3,17 @@
     text-transform: uppercase;
     backface-visibility: hidden;
     
-
     &--main{
+        font-family: 'Allerta Stencil', sans-serif;
+        font-size: 2.5rem;
         display: block;
-        font-weight: 700;
+        font-weight: 300;
         animation-name: moveInTop;
         animation-duration: 2s;
         animation-timing-function: ease-out; 
         text-shadow: 2px 2px 0 #bcbcbc, 4px 4px 0 #9c9c9c;
         letter-spacing: 2rem;
-
+        text-align: center;
     }
 
     &--sub_1{
@@ -38,15 +39,17 @@
 }
 
 .heading-secondary {
-    font-size: 2.8rem;
+    font-size: 3rem;
     text-transform: uppercase;
     font-weight: 700;
     display: inline-block;
     background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
     -webkit-background-clip: text;
     color: transparent;
-    letter-spacing: 2px;
+    letter-spacing: 8px;
     transition-property: all 2s;
+    font-family: 'Bangers', cursive;
+    // font-family: 'Kaushan Script', cursive;
 
     &:hover {
         transform: skewX(2deg) skewX(15deg) scale(1.1);

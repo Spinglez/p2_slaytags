@@ -2,7 +2,7 @@
     <nav class="navbar navbar-expand-lg navigation__nav" id="navbar">
         <div class="container-fluid">
 
-            <a class="navbar-brand navigation__logo" href="#"><img src="../img/Logo_Slaytag.png" style="width: 45px; height: 45px;"
+            <a class="navbar-brand navigation__logo" href="/app"><img src="../img/Logo_Slaytag.png" style="width: 45px; height: 45px;"
                     alt="logo" id="logo"></a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
@@ -16,13 +16,18 @@
                         <a class="nav-link navigation__link" href="#">About us<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link navigation__link" href="#"><i class="fas fa-heart"></i>list</a>
+                        <a class="nav-link navigation__link" href="/wishlist"><i class="fas fa-heart"></i>list</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link navigation__link" href="#">History</a>
+                        <a class="nav-link navigation__link" href="/history">History</a>
                     </li>
                 </ul>
             </div>
+
+            <form class="form-inline my-2 my-lg-0" action="/app" method="get">
+                <button id="home" class="btn btn-sm btn-outline-secondary" title="Back to SEARCH page" type="submit"><i
+                        class="fas fa-search"></i></button>
+            </form>
 
             <form class="form-inline">
                 <a>
@@ -35,20 +40,66 @@
     </nav>
     <!-- END NAVBAR -->
 </div>
-<table class="table table-borderless table-hover">
-    <thead>
-        <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Item</th>
-            <th scope="col">Date</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th scope="row">{{id}}</th>
-            <td>{{name}}</td>
-            <!-- whatever the name of the date searched variable is, if we have one.. -->
-            <td>{{date}}</td>
-        </tr>
-    </tbody>
-</table>
+
+
+<main>
+    <section class="section-result u-margin-bottom-small">
+        <div class="u-center-text u-padding-top-medium">
+            <h2 class="heading-secondary u-margin-bottom-medium">History</h2>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="table-style u-padding-bottom-big">
+                    <table class="table table-borderless table-hover table-striped table-dark">
+                        <thead>
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Date</th>
+                                <th scope="col">URL</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                {{!-- {{#each bbEntries}} --}}
+                                <th scope="row">{{this.id}}</th>
+                                <td>This is the name of BESTBUY's item{{this.name}}</td>
+                                <!-- whatever the name of the date searched variable is, if we have one.. -->
+                                <td>This is a search date (BESTBUY){{this.createdAt}}</td>
+                                <td>This is a URL (BESTBUY){{this.date}}</td>
+                                {{!-- {{/each}} --}}
+                            </tr>
+
+                            <tr>
+                                {{!-- {{#each ebEntries}} --}}
+                                <th scope="row">{{this.id}}</th>
+                                <td>This is the name of EBAY's item{{this.name}}</td>
+                                <!-- whatever the name of the date searched variable is, if we have one.. -->
+                                <td>This is a search date (EBAY){{this.createdAt}}</td>
+                                <td>This is a URL (EBAY){{this.date}}</td>
+                                {{!-- {{/each}} --}}
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</main>
+
+{{!-- FOOTER --}}
+<footer>
+    <div class="footer-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="copyright">
+                        <p>@Copyright By <span>SlayTags.2019</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

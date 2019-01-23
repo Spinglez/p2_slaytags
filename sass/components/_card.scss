@@ -1,29 +1,57 @@
+// CARD FOR RESULTS PAGE
 .card-box{
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.7rem;
     background-color: rgba($color-white, .8);
-    // font-size: 1rem;
     padding: 3rem;
     text-align: center;
     border-radius: 3px;
     box-shadow: 0 1.5rem 4rem $color-black-shadow-4;
 
     &--product{
-
+        
         &__bestbuy{
             background-color: $color-bestbuy;
+            height: 180px;    
         }
 
         &__ebay{
             background-color: $color-ebay;
+            height: 180px;
         }
     }
 
     &--sku{
         color: $color-primary-light;
-        font-size: 5px;
+        font-size: 1.7rem !important;
+        letter-spacing: 5px;
+        font-family: 'Pathway Gothic One', sans-serif;
     }
 
     &--price{
         color: $color-primary-dark;
+        font-size: 2rem !important;
+        letter-spacing: 2px;
+        font-family: 'Teko', sans-serif;
+    }
+
+    &--link{
+        // Animation for btn-link on result-Page here
+        &:link,
+        &:visited {
+            text-decoration: none;
+            display: inline-block;    
+        }
+
+        &:hover,
+        &:active { 
+            -webkit-animation: swing 1s ease;
+            animation: swing 1s ease;
+            -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+            color: $color-primary-light;
+            box-shadow: 0 1rem 2rem rgba($color-grey-light, .2);      
+        }
     }
 }
 
@@ -37,12 +65,36 @@
         
         li{
             text-align: center;
-            font-size: 1.4rem;
             padding: 1rem;
 
             &:not(:last-child){
                 border-bottom: 1px solid $color-grey-light;
             }
         }
+    }
+}
+
+// HOW-TO-USE CARD
+.card-body{
+    background-color: rgba($color-white, .8);
+    box-shadow: 0 1.5rem 4rem $color-black-shadow-4;
+    ul{
+        margin: 0 auto;
+        list-style: none;
+        
+        li{
+            text-align: left;
+            padding: 3px;
+            &:not(:last-child){
+                border-bottom: 1px solid $color-grey-light;
+            }
+        }
+    }
+
+    &__ex{
+        color: $color-primary-light;
+        font-size: 1.2rem;
+        font-family: 'Oswald', sans-serif;
+        text-align: center;
     }
 }

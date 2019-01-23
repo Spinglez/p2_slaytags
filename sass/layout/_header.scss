@@ -1,32 +1,30 @@
 .gallery {
-    
-    height: 95vh; 
+    height: 70vh; 
     background-image: linear-gradient(
         to right bottom, 
         rgba($color-primary-light, 0.6), 
-        rgba($color-primary-dark, 0.6)), 
-    url(../../img/plant.jpg);
+        rgba($color-primary-dark, 0.6));
     background-size: cover;
     background-position: top;
     position: relative;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 50vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 50vh, 0 100%);
 
     &__img{
-        width: 50%;
+        width: 38%;
         height: auto;
         position: absolute;
         left: 5%;
         backface-visibility: hidden;
-        -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 90%);
+        clip-path: polygon(50% 0%, 0% 100%, 100% 90%);
     }
 
     &__text-box{
-        // Add Google Font for Tittle in header here
         position: absolute;
-        top: 40%;
+        top: 35%;
         left: 50%;
         transform: translate(-50%, -50%);
     }
 }
+

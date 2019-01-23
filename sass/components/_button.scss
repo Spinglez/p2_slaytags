@@ -1,0 +1,30 @@
+// BUTTONs
+.btn-outline-secondary{
+    color: $color-white;
+    text-shadow: $text-shadow;
+}
+
+.btn-small {
+    color: $color-grey-dark;
+}
+
+.btn {
+    
+    &--animated{
+        animation: roll-in-blurred-top 1s ease-out .75s;
+        animation-fill-mode: backwards;
+    }
+
+    &--home{
+
+    }
+    
+    &:hover{
+        color: $color-primary-light;
+    }
+}
+
+.btn-style{
+    text-shadow: $text-shadow;
+}
+

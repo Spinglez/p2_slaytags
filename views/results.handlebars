@@ -27,8 +27,10 @@
             </div>
 
             <form class="form-inline my-2 my-lg-0" action="/app" method="get">
-                <button id="home" class="btn btn-sm btn-outline-secondary" type="submit"><i class="fas fa-home"></i></button>
+                <button id="home" class="btn btn-sm btn-outline-secondary btn--home" title="Back to HOME page" type="submit"><i
+                        class="fas fa-home"></i></button>
             </form>
+
             <form class="form-inline">
                 <a>
                     <button class="btn btn-sm btn-outline-secondary" id="qsLogoutBtn" type="button">Log Out</button>
@@ -42,100 +44,80 @@
 <!-- END NAVBAR -->
 
 
-<header class="gallery u-padding-top-small" id="gallery">
-    {{!-- I MOVED THIS TO NAVBAR --}}
-    {{!-- <form class="form-inline my-2 my-lg-0" action="/app" method="get">
-        <button id="home" class="btn btn-dark my-2 my-sm-0" type="submit">Back Home</button>
-    </form> --}}
-    <div class="gallery__img">
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="../img/work.jpg" class="d-block  mx-auto" alt="work">
-                </div>
-                <div class="carousel-item">
-                    <img src="../img/desk.jpg" class="d-block  mx-auto" alt="desk">
-                </div>
-                <div class="carousel-item">
-                    <img src="../img/oldmachine.jpg" class="d-block  mx-auto" alt="old machine">
-                </div>
-                <div class="carousel-item">
-                    <img src="../img/phone.jpg" class="d-block  mx-auto" alt="phone">
-                </div>
-                <div class="carousel-item">
-                    <img src="../img/laptop.jpg" class="d-block  mx-auto" alt="laptop">
-                </div>
-                <div class="carousel-item">
-                    <img src="../img/laptop2.jpg" class="d-block  mx-auto" alt="laptop2">
-                </div>
-                <div class="carousel-item">
-                    <img src="../img/konika.jpg" class="d-block  mx-auto" alt="konika">
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="gallery__text-box">
-        <h1 class="heading-primary">
-            <span class="heading-primary--main">Your Results</span>
-        </h1>
-    </div>
-
-</header>
-
 {{!-- After User search - render Bestbuy and eBay items go HERE --}}
 <main>
-    <section class="section-result u-margin-bottom-medium">
-        <div class="u-center-text u-padding-top-medium">
-            <h2 class="heading-secondary u-margin-bottom-small">Results</h2>
-        </div>
-        <div class="row u-center-text">
+    {{!-- <div class="container-fuild"> --}}
+        <section class="section-result u-margin-bottom-medium">
+            <div class="u-center-text u-padding-top-medium">
+                <h2 class="heading-secondary u-margin-bottom-small">Results</h2>
+            </div>
+            <div class="row">
 
-            {{!-- BESTBUY column --}}
-            <div class="col">
-                <h3 class="heading-tertiary u-margin-bottom-small">{{this.userInput}}
-                    <img src="../img/bestBuy-logo.png" style="width: 101px; height: auto;" alt="BestBuy-logo">
-                </h3>
-                <div class="card__details">
-                    <div class="list-item" id="bestBuy-item">
-                        <ul id="example-list" class="list-group">
-                            {{#each bbEntries}}
-                            <li class="card-box card-box--product__bestbuy"><b><em>Product No.{{@key}}: </em></b>{{this.name}}</li>
-                            <li class="card-box card-box--sku"><b>SKU #: </b>{{this.sku}} </li>
-                            <li class="card-box card-box--price"><b>Price: $</b>{{this.price}}</li>
-                            <li class="card-box card-box--link"><a href={{this.url}} class="btn btn-info" role="button">Buy Now</a></li>
-                            <br>
-                            {{/each}}
-                        </ul>
+                {{!-- BESTBUY column --}}
+                <div class="col-lg-6 col-md-5 col-sm-12">
+                    <h3 class="heading-tertiary u-margin-bottom-small u-center-text">{{this.userInput}}
+                        <img src="../img/bestBuy-logo.png" style="width: 101px; height: auto;" alt="BestBuy-logo">
+                    </h3>
+                    <div class="card__details">
+                        <div class="list-item" id="bestBuy-item">
+                            <ul id="example-list" class="list-group">
+                                {{#each bbEntries}}
+                                <li class="card-box card-box--product__bestbuy"><b>Product No.{{@key}}: </b>{{this.name}}</li>
+                                <li class="card-box card-box--sku"><b>SKU #: </b>{{this.sku}} </li>
+                                <li class="card-box card-box--price"><b>Price: $</b>{{this.price}}</li>
+                                <li class="card-box card-box--item"><a href={{this.url}} class="btn btn-info card-box--link"
+                                        role="button">Buy Now</a></li>
+                                <br>
+                                <hr>
+                                {{/each}}
+                            </ul>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+
+                {{!-- EBAY column --}}
+                <div class="col-lg-6 col-md-5 col-sm-12">
+                    <h3 class="heading-tertiary u-margin-bottom-medium u-center-text">{{this.userInput}}
+                        <img src="../img/eBay-logo.png" style="width: 148px; height: auto;" alt="eBay-logo">
+                    </h3>
+                    <div class="card__details">
+                        <div class="list-item" id="eBay-item">
+                            <ul id="example-list" class="list-group">
+                                {{#each ebEntries}}
+                                <li class="card-box card-box--product__ebay"><b>Product No.{{@key}}: </b>{{this.name}}</li>
+                                <li class="card-box card-box--sku"><b>SKU #: </b>{{this.sku}} </li>
+                                <li class="card-box card-box--price"><b>Price: $</b>{{this.price}}</li>
+                                <li class="card-box card-box--item"><a href={{this.url}} class="btn btn-info card-box--link"
+                                        role="button">Buy
+                                        Now</a></li>
+                                <br>
+                                <hr>
+                                {{/each}}
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                </a>
-            </div>
 
-            {{!-- EBAY column --}}
-            <div class="col">
-                <h3 class="heading-tertiary u-margin-bottom-medium">{{this.userInput}}
-                    <img src="../img/eBay-logo.png" style="width: 149px; height: auto;" alt="eBay-logo">
-                </h3>
-                <div class="card__details">
-                    <div class="list-item" id="eBay-item">
-                        <ul id="example-list" class="list-group">
-                            {{#each ebEntries}}
-                            <li class="card-box card-box--product__ebay"><b><em>Product No.{{@key}}: </em></b>{{this.name}}</li>
-                            <li class="card-box card-box--sku"><b>SKU #: </b>{{this.sku}} </li>
-                            <li class="card-box card-box--price"><b>Price: $</b>{{this.price}}</li>
-                            <li class="card-box card-box--link"><a href={{this.url}} class="btn btn-info" role="button">Buy Now</a></li>
-                            <br>
-                            {{/each}}
-                        </ul>
-                    </div>
-                </div>
             </div>
-
-        </div>
-        {{!-- END ROW div --}}
-    </section>
+            {{!-- END ROW div --}}
+        </section>
+        {{!-- </div> --}}
 </main>
 
+{{!-- FOOTER --}}
+<footer>
+    <div class="footer-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="copyright">
+                        <p>@Copyright By <span>SlayTags.2019</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
