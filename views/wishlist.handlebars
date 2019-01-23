@@ -16,13 +16,18 @@
                         <a class="nav-link navigation__link" href="#">About us<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link navigation__link" href="#"><i class="fas fa-heart"></i>list</a>
+                        <a class="nav-link navigation__link" href="/wishlist"><i class="fas fa-heart"></i>list</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link navigation__link" href="#">History</a>
+                        <a class="nav-link navigation__link" href="/history">History</a>
                     </li>
                 </ul>
             </div>
+
+            <form class="form-inline my-2 my-lg-0" action="/app" method="get">
+                <button id="home" class="btn btn-sm btn-outline-secondary btn--home" title="Back to HOME page" type="submit"><i
+                        class="fas fa-home"></i></button>
+            </form>
 
             <form class="form-inline">
                 <a>
@@ -36,11 +41,18 @@
     <!-- END NAVBAR -->
 </div>
 
-<ul id="wish-list" class="list-group">
-    {{#each products}}
-    <li data-id="{{this.id}}" class="list-group-item">
-        <a href="Product/{{this.id}}">{{this.name}}</a>
-        <button class="btn btn-danger float-right delete">ｘ</button>
-    </li>
-    {{/each}}
-</ul>
+<main>
+    <section class="section-result u-margin-bottom-small">
+        <div class="u-center-text u-padding-top-medium">
+            <h2 class="heading-secondary u-margin-bottom-medium">History</h2>
+        </div>
+        <ul id="wish-list" class="list-group">
+            {{#each products}}
+            <li data-id="{{this.id}}" class="list-group-item">
+                <a href="Product/{{this.id}}">{{this.name}}</a>
+                <button class="btn btn-danger float-right delete">ｘ</button>
+            </li>
+            {{/each}}
+        </ul>
+    </section>
+</main>
