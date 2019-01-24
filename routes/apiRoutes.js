@@ -30,7 +30,7 @@ module.exports = function (app) {
 
   app.post('/api/products', function (req, res) {
     bestBuy(req.body.userInput);
-    ebay(req.body.userInput);
+    eBay(req.body.userInput);
   });
 
   app.post('/api/users', function (req, res) {
