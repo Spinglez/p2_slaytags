@@ -1,6 +1,6 @@
 const db = require('../models');
-const bestBuy = require('./../controllers/bestBuy');
-const eBay = require('./../controllers/ebay');
+const bestBuy = require('../controllers/bestBuyQuery');
+const eBay = require('../controllers/ebayQuery');
 
 module.exports = function (app) {
   app.get('/api/products', function (req, res) {
