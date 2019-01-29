@@ -30,6 +30,6 @@ Finally, open the local application on port 3000 at http://localhost:3000/
 # **Collaborators**
 * Christian Cabrera (https://github.com/Spinglez)
 * Tam Tran (https://github.com/tamtr89)
-* Matt Wong (https://github.com/mouzima)
-* Mouzima Mousumi (https://github.com/mattthewong)
+* Matt Wong (https://github.com/mattthewong)
+* Mouzima Mousumi (https://github.com/mouzima)
 * Jonathan Hart (https://github.com/jhart25)
